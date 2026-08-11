@@ -32,7 +32,9 @@ useHead({
     <main>
       <slot />
     </main>
-    <div class="bg-grid mask-fade absolute w-full h-[130vh] top-0 -z-10 text-primary/30"></div>
+    <div
+      class="bg-grid bg-accent mask-fade absolute w-full h-[130vh] top-0 -z-10 text-primary/30"
+    ></div>
     <Footer />
   </div>
 </template>
