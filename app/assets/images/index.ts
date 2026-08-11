@@ -27,6 +27,14 @@ import teatLogo from '~/assets/images/marquee/teat-logo.png'
 import ideaLeft from '~/assets/images/idea/idea-left.png'
 import ideaRight from '~/assets/images/idea/idea-right.png'
 
+import filePlan from '~/assets/images/experience/file-plan.png'
+import elecPC from '~/assets/images/experience/electronic-pc.png'
+import elec1 from '~/assets/images/experience/electronic 1.png'
+import fashion from '~/assets/images/experience/fashion 1.png'
+import homeCleaning from '~/assets/images/experience/home-cleaning 1.png'
+import jewelry from '~/assets/images/experience/jewelry-2 1.png'
+import skinCar from '~/assets/images/experience/skin-care 1.png'
+
 export {
   logo,
   chinaFlag,
@@ -58,3 +66,5 @@ export {
 }
 
 export { ideaLeft, ideaRight }
+
+export { elec1, elecPC, fashion, filePlan, homeCleaning, jewelry, skinCar }
