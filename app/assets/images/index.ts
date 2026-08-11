@@ -24,6 +24,9 @@ import sportLogo from '~/assets/images/marquee/sport-logo.png'
 import surgeLogo from '~/assets/images/marquee/surge-logo.png'
 import teatLogo from '~/assets/images/marquee/teat-logo.png'
 
+import ideaLeft from '~/assets/images/idea/idea-left.png'
+import ideaRight from '~/assets/images/idea/idea-right.png'
+
 export {
   logo,
   chinaFlag,
@@ -53,3 +56,5 @@ export {
   surgeLogo,
   teatLogo,
 }
+
+export { ideaLeft, ideaRight }

@@ -187,6 +187,12 @@
 
 body {
   background-color: var(--background);
+  overflow-x: hidden;
+}
+
+.section-container-lg {
+  width: min(100% - 1rem, 1550px);
+  margin-inline: auto;
 }
 
 .section-container {
