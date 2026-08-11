@@ -1,0 +1,35 @@
+<script setup lang="ts">
+
+type TVariant = 'default' | 'outline'
+type TSize = 'sm' | 'md' | 'lg'
+interface IProps {
+    variant?: TVariant
+    size?: TSize
+    class?: string;
+}
+
+const variantClasses : Record<TVariant, string> = {
+
+    default: "gradient-bg text-white",
+    outline: "gradient-border-bg"
+}
+
+const sizeClasses : Record<TSize, string> = {
+    sm: "text-[12px] px-3 py-1",
+    md: "text-sm",
+    lg: "text-lg px-5 py-3"
+
+}
+
+const props = withDefaults(defineProps<IProps>(), {
+    variant: 'default',
+    size: 'md'
+})
+
+</script>
+
+<template>
+    <button :class="'cursor-pointer px-4 py-2 rounded-full font-semibold ' + variantClasses[props.variant] + ' ' + sizeClasses[props.size] + ' ' + props.class">
+        <p :class="props.variant === 'outline' ? 'gradient-text ' : ''"><slot /></p>
+    </button>
+</template>
