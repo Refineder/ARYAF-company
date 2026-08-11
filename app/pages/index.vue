@@ -3,6 +3,7 @@ import AllYouNeed from '~/components/sections/HomeSections/AllYouNeed/AllYouNeed
 import Experience from '~/components/sections/HomeSections/Experience/Experience.vue'
 import Hero from '~/components/sections/HomeSections/HeroSection/Hero.vue'
 import Marquee from '~/components/sections/HomeSections/MarqueeSlider/Marquee.vue'
+import Sale from '~/components/sections/HomeSections/Sale/Sale.vue'
 import SimpleIdea from '~/components/sections/HomeSections/SimpleIdea/SimpleIdea.vue'
 </script>
 <template>
@@ -11,4 +12,5 @@ import SimpleIdea from '~/components/sections/HomeSections/SimpleIdea/SimpleIdea
   <AllYouNeed />
   <SimpleIdea />
   <Experience />
+  <Sale />
 </template>

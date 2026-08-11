@@ -2,7 +2,7 @@
 import type { Component } from 'vue'
 
 type TVariant = 'default' | 'outline'
-type TSize = 'sm' | 'md' | 'lg'
+export type TSize = 'sm' | 'md' | 'lg'
 interface IProps {
   variant?: TVariant
   size?: TSize

@@ -35,6 +35,9 @@ import homeCleaning from '~/assets/images/experience/home-cleaning 1.png'
 import jewelry from '~/assets/images/experience/jewelry-2 1.png'
 import skinCar from '~/assets/images/experience/skin-care 1.png'
 
+import saleBig from '~/assets/images/sale/sale-big.jpg'
+import saleSmall from '~/assets/images/sale/sale-small.jpg'
+
 export {
   logo,
   chinaFlag,
@@ -68,3 +71,5 @@ export {
 export { ideaLeft, ideaRight }
 
 export { elec1, elecPC, fashion, filePlan, homeCleaning, jewelry, skinCar }
+
+export { saleBig, saleSmall }
