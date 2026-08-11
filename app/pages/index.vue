@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AllYouNeed from '~/components/sections/HomeSections/AllYouNeed/AllYouNeed.vue'
+import CommerceSectors from '~/components/sections/HomeSections/CommerceSectors/CommerceSectors.vue'
 import Experience from '~/components/sections/HomeSections/Experience/Experience.vue'
 import Hero from '~/components/sections/HomeSections/HeroSection/Hero.vue'
 import Marquee from '~/components/sections/HomeSections/MarqueeSlider/Marquee.vue'
@@ -15,4 +16,5 @@ import Statistices from '~/components/sections/HomeSections/Statistices/Statisti
   <Experience />
   <Sale />
   <Statistices />
+  <CommerceSectors />
 </template>

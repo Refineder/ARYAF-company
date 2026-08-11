@@ -38,6 +38,11 @@ import skinCar from '~/assets/images/experience/skin-care 1.png'
 import saleBig from '~/assets/images/sale/sale-big.jpg'
 import saleSmall from '~/assets/images/sale/sale-small.jpg'
 
+import commerceAim from '~/assets/images/commerce/commerce-aim.jpg'
+import commerceArrow from '~/assets/images/commerce/commerce-arrow.jpg'
+import commerceDevelop from '~/assets/images/commerce/commerce-develop.png'
+import commerceIdea from '~/assets/images/commerce/commerce-idea.jpg'
+
 export {
   logo,
   chinaFlag,
@@ -73,3 +78,5 @@ export { ideaLeft, ideaRight }
 export { elec1, elecPC, fashion, filePlan, homeCleaning, jewelry, skinCar }
 
 export { saleBig, saleSmall }
+
+export { commerceAim, commerceArrow, commerceDevelop, commerceIdea }
