@@ -105,6 +105,30 @@
   background: var(--primary);
 }
 
+@utility gradient-bg-pink {
+  background: linear-gradient(45deg, #f6339a, #ad46ff);
+}
+
+@utility gradient-bg-orange {
+  background: linear-gradient(45deg, #fb2c36, #ff6900);
+}
+
+@utility gradient-bg-cyan {
+  background: linear-gradient(45deg, #00b8db, #2b7fff);
+}
+
+@utility gradient-bg-violet {
+  background: linear-gradient(45deg, #ad46ff, #615fff);
+}
+
+@utility gradient-bg-emerald {
+  background: linear-gradient(45deg, #00bc7d, #00c950);
+}
+
+@utility gradient-bg-violet-light {
+  background: linear-gradient(45deg, #e12afb, #8e51ff);
+}
+
 @font-face {
   font-family: 'IBM Plex Sans Arabic';
   src: url('~/assets/fonts/IBMPlexSansArabic-Thin.ttf') format('truetype');

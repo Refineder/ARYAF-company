@@ -4,7 +4,7 @@ import { MARQUEE_LOGOS } from '~/constants/marquee'
 </script>
 
 <template>
-  <section class="overflow-hidden py-8 bg-white rounded-lg" dir="ltr">
+  <section class="overflow-hidden section-spacing-top py-8 bg-white rounded-lg" dir="ltr">
     <div class="flex w-max animate-marquee">
       <div v-for="copy in 2" :key="copy" class="flex shrink-0">
         <div
