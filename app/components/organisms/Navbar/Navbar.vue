@@ -142,10 +142,10 @@ const iconMap: Record<TNavIcon, Component> = {
   bookMarked: BookMarked,
   wayPoints: Waypoints,
   scrollText: ScrollText,
-  "gamepad-2": Gamepad2,
-  "hand-heart": HandHeart,
-  "heart-pulse": HeartPulse,
-  "laptop-minimal": LaptopMinimal,
+  'gamepad-2': Gamepad2,
+  'hand-heart': HandHeart,
+  'heart-pulse': HeartPulse,
+  'laptop-minimal': LaptopMinimal,
   bookText: BookText,
   crown: Crown,
   gem: Gem,
@@ -153,9 +153,9 @@ const iconMap: Record<TNavIcon, Component> = {
   hospital: Hospital,
   lamp: Lamp,
   shirt: Shirt,
-  "briefcase-business": BriefcaseBusiness,
-  "thumbs-up": ThumbsUp,
-  "user-shield": UserShield,
+  'briefcase-business': BriefcaseBusiness,
+  'thumbs-up': ThumbsUp,
+  'user-shield': UserShield,
   university: University,
   warehouse: Warehouse,
 }
@@ -177,7 +177,7 @@ const toggleItem = (item: INavbarItem) => {
 const toggleMobileMenu = () => {
   mobileOpen.value = !mobileOpen.value
   activeLabel.value = null
-  console.log('click');
+  console.log('click')
 }
 
 const toggleMobileAccordion = (item: INavbarItem) => {
@@ -213,7 +213,10 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <nav ref="navRef" class="section-container sticky top-5 z-50 border border-zinc-300 rounded-full my-5 backdrop-blur-md">
+  <nav
+    ref="navRef"
+    class="section-container sticky top-5 z-50 mb-10 border border-zinc-300 rounded-full backdrop-blur-md"
+  >
     <article class="flex justify-between items-center px-4 py-3 gap-3">
       <ul class="flex items-center gap-2 shrink-0">
         <li>
@@ -234,11 +237,19 @@ onBeforeUnmount(() => {
             (activeLabel === item.label ? 'bg-background' : 'hover:bg-secondary/70')
           "
         >
-          <p :class="'text-base xl:text-lg transition-colors duration-200 ' + (activeLabel === item.label ? 'text-primary font-semibold' : '')">
+          <p
+            :class="
+              'text-base xl:text-lg transition-colors duration-200 ' +
+              (activeLabel === item.label ? 'text-primary font-semibold' : '')
+            "
+          >
             {{ item.label }}
           </p>
           <ChevronDown
-            :class="'w-5 transition-transform duration-300 ' + (activeLabel === item.label ? 'rotate-180 text-primary' : 'rotate-0')"
+            :class="
+              'w-5 transition-transform duration-300 ' +
+              (activeLabel === item.label ? 'rotate-180 text-primary' : 'rotate-0')
+            "
           />
         </li>
       </ul>
@@ -261,11 +272,17 @@ onBeforeUnmount(() => {
     <article
       :class="
         'hidden section-container lg:grid gap-2 overflow-hidden bg-white absolute top-full left-[50%] -translate-x-[50%] mt-3 rounded-lg shadow-lg transition-all duration-300 origin-top ' +
-        (activeLabel ? 'max-h-[32rem] p-4 opacity-100 translate-y-0 overflow-y-auto' : 'max-h-0 p-0 opacity-0 pointer-events-none')
+        (activeLabel
+          ? 'max-h-[32rem] p-4 opacity-100 translate-y-0 overflow-y-auto'
+          : 'max-h-0 p-0 opacity-0 pointer-events-none')
       "
-      style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));"
+      style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))"
     >
-      <article v-for="column in activeItem?.columns ?? []" :key="column.title" class="flex flex-col gap-4">
+      <article
+        v-for="column in activeItem?.columns ?? []"
+        :key="column.title"
+        class="flex flex-col gap-4"
+      >
         <h3 class="text-gray-400 font-medium">{{ column.title }}</h3>
         <ul class="flex flex-col gap-2">
           <li
@@ -277,7 +294,9 @@ onBeforeUnmount(() => {
               <component :is="iconMap[link.icon]" class="w-5 h-5 text-primary" />
             </div>
             <div>
-              <p class="nav-card-text__hover text-sm font-medium transition-colors duration-200">{{ link.title }}</p>
+              <p class="nav-card-text__hover text-sm font-medium transition-colors duration-200">
+                {{ link.title }}
+              </p>
               <small class="text-xs text-muted-foreground">{{ link.description }}</small>
             </div>
           </li>
@@ -288,27 +307,44 @@ onBeforeUnmount(() => {
     <article
       :class="
         'lg:hidden grid gap-4 overflow-hidden bg-white absolute top-full left-0 right-0 rounded-2xl shadow-lg transition-all duration-300 origin-top ' +
-        (mobileOpen ? 'max-h-[70vh] p-4 opacity-100 translate-y-0 overflow-y-auto' : 'max-h-0 p-0 opacity-0 pointer-events-none')
+        (mobileOpen
+          ? 'max-h-[70vh] p-4 opacity-100 translate-y-0 overflow-y-auto'
+          : 'max-h-0 p-0 opacity-0 pointer-events-none')
       "
     >
       <ul class="flex flex-col gap-2">
-        <li v-for="item in NAVBAR_ITEMS" :key="item.label" class="flex flex-col rounded-xl overflow-hidden">
+        <li
+          v-for="item in NAVBAR_ITEMS"
+          :key="item.label"
+          class="flex flex-col rounded-xl overflow-hidden"
+        >
           <button
             @click="toggleMobileAccordion(item)"
             class="flex items-center justify-between gap-2 cursor-pointer rounded-xl px-3 py-2 hover:bg-secondary/70 transition-colors duration-200"
           >
-            <p :class="'text-base font-medium ' + (mobileAccordion === item.label ? 'text-primary' : '')">{{ item.label }}</p>
+            <p
+              :class="
+                'text-base font-medium ' + (mobileAccordion === item.label ? 'text-primary' : '')
+              "
+            >
+              {{ item.label }}
+            </p>
             <ChevronDown
-              :class="'w-5 transition-transform duration-300 ' + (mobileAccordion === item.label ? 'rotate-180 text-primary' : 'rotate-0')"
+              :class="
+                'w-5 transition-transform duration-300 ' +
+                (mobileAccordion === item.label ? 'rotate-180 text-primary' : 'rotate-0')
+              "
             />
           </button>
 
           <article
             :class="
               'grid gap-3 overflow-hidden overflow-y-auto transition-all duration-300 ' +
-              (mobileAccordion === item.label ? 'max-h-[60vh] p-2 opacity-100' : 'max-h-0 p-0 opacity-0')
+              (mobileAccordion === item.label
+                ? 'max-h-[60vh] p-2 opacity-100'
+                : 'max-h-0 p-0 opacity-0')
             "
-            style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));"
+            style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))"
           >
             <div v-for="column in item.columns" :key="column.title" class="flex flex-col gap-2">
               <h3 class="text-gray-400 text-sm font-medium">{{ column.title }}</h3>
@@ -318,11 +354,17 @@ onBeforeUnmount(() => {
                   :key="link.title"
                   class="nav-card flex cursor-pointer gap-2 items-center rounded-md hover:bg-secondary px-2 py-2 transition-colors duration-200"
                 >
-                  <div class="rounded-md p-2.5 bg-secondary wrapper-icon transition-colors duration-200">
+                  <div
+                    class="rounded-md p-2.5 bg-secondary wrapper-icon transition-colors duration-200"
+                  >
                     <component :is="iconMap[link.icon]" class="w-4 h-4 text-primary" />
                   </div>
                   <div>
-                    <p class="nav-card-text__hover text-sm font-medium transition-colors duration-200">{{ link.title }}</p>
+                    <p
+                      class="nav-card-text__hover text-sm font-medium transition-colors duration-200"
+                    >
+                      {{ link.title }}
+                    </p>
                     <small class="text-xs text-muted-foreground">{{ link.description }}</small>
                   </div>
                 </li>

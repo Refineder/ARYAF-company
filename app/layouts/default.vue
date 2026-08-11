@@ -8,7 +8,6 @@ useSeoMeta({
 })
 
 useHead({
-
   meta: [
     {
       name: 'description',
@@ -25,16 +24,15 @@ useHead({
     dir: 'rtl',
   },
 })
-
-
 </script>
 
 <template>
   <div class="relative">
-    <Navbar  name="Yousef"/>
+    <Navbar />
     <main>
       <slot />
     </main>
+    <div class="bg-grid mask-fade absolute w-full h-[130vh] top-0 -z-10 text-primary/30"></div>
     <Footer />
   </div>
 </template>

@@ -304,7 +304,6 @@ export const NAVBAR_ITEMS: INavbarItem[] = [
             description: 'حوّل أفكارك إلى مبيعات',
             icon: 'file-text',
           },
-         
         ],
       },
       {
