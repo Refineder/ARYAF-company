@@ -8,6 +8,7 @@ import Sale from '~/components/sections/HomeSections/Sale/Sale.vue'
 import SimpleIdea from '~/components/sections/HomeSections/SimpleIdea/SimpleIdea.vue'
 import Soluations from '~/components/sections/HomeSections/Soluations/Soluations.vue'
 import Statistices from '~/components/sections/HomeSections/Statistices/Statistices.vue'
+import Stories from '~/components/sections/HomeSections/Stories/Stories.vue'
 </script>
 <template>
   <Hero />
@@ -19,4 +20,5 @@ import Statistices from '~/components/sections/HomeSections/Statistices/Statisti
   <Statistices />
   <CommerceSectors />
   <Soluations />
+  <Stories />
 </template>

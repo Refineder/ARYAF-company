@@ -51,7 +51,7 @@ const currentTab = computed(() => SOLUTION_TABS[activeTabIndex.value] || SOLUTIO
               class="flex items-center gap-4"
             >
               <div class="p-3 rounded-md bg-accent">
-                <Icons :name="feature.icon" width="22" height="20" />
+                <Icons :name="feature.icon" :width="22" :height="20" />
               </div>
               <p class="text-lg">{{ feature.text }}</p>
             </li>

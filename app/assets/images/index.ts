@@ -45,6 +45,9 @@ import commerceIdea from '~/assets/images/home/commerce/commerce-idea.jpg'
 
 import soluation from '~/assets/images/home/soluations/soluation.webp'
 
+import story1 from '~/assets/images/home/stories/story-1.png'
+import story2 from '~/assets/images/home/stories/story-2.jpg'
+
 export {
   logo,
   chinaFlag,
@@ -84,3 +87,5 @@ export { saleBig, saleSmall }
 export { commerceAim, commerceArrow, commerceDevelop, commerceIdea }
 
 export { soluation }
+
+export { story1, story2 }
