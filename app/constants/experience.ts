@@ -5,7 +5,7 @@ interface IExperience {
   thumb: string
 }
 
-export const EXPERIENCE_DATA = [
+export const EXPERIENCE_DATA: IExperience[] = [
   {
     title: 'عبايات وازياء',
     thumb: fashion,

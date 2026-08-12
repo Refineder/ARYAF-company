@@ -2,6 +2,7 @@
 import { hero, hero1, hero2, hero3 } from '~/assets/images'
 import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
 import Button from '~/components/atoms/Button/Button.vue'
+import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
 </script>
 
 <template>
@@ -10,25 +11,17 @@ import Button from '~/components/atoms/Button/Button.vue'
   >
     <article class="flex flex-col gap-8 self-center">
       <h2
-        class="max-w-full text-center leading-normal font-semibold lg:leading-22 lg:max-w-3xl lg:text-start"
-        style="font-size: clamp(25px, 5vw, 68px)"
+        class="max-w-full text-center leading-normal clamp-text-lg font-semibold lg:leading-22 lg:max-w-3xl lg:text-start"
       >
         من <span class="gradient-text">فــــــــــــــــــــــــكرة</span> في رأسك إلى عــــلامة
         تجارية <span class="gradient-text">على الإنترنت</span>
       </h2>
-      <p class="max-w-full text-gray-500 lg:max-w-3xl" style="font-size: clamp(16px, 3vw, 24px)">
+      <p class="max-w-full text-gray-500 clamp-text-sm lg:max-w-3xl">
         أنشئ متجرك الإلكتروني في دقائق، واربط منتجاتك بمجموعة متكاملة من الحلول الرقميَّة الذكيَّة
         للمدفوعات، والشحن، وإدارة المخزون، والتسويق، بكل سهولة
       </p>
-      <div class="flex items-center gap-6 flex-wrap">
-        <Button size="lg">
-          <div class="flex items-center gap-4">
-            أنشئ متجرك مجاناً
-            <div class="bg-white p-2 w-fit rounded-full">
-              <Icons name="arrowLeftGradient" />
-            </div>
-          </div>
-        </Button>
+      <div class="flex items-center justify-center gap-6 flex-wrap sm:justify-start">
+        <ButtonWithIcon icon-name="arrowLeftGradient" size="lg"> أنشئ متجرك مجاناً </ButtonWithIcon>
 
         <Button size="lg" variant="outline">اكتشف المتجر التجريبي</Button>
       </div>

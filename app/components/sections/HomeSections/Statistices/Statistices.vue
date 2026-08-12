@@ -5,15 +5,12 @@ import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
 <template>
   <div class="section-spacing-top bg-accent py-20">
     <section class="section-container flex flex-col gap-6">
-      <h2 class="text-center font-semibold" style="font-size: clamp(24px, 5vw, 38px)">
+      <h2 class="text-center font-semibold clamp-text-md">
         من الفكرة الى <span class="gradient-text">أول مليون مبيعات</span>
       </h2>
-      <p
-        class="text-center text-gray-500 max-w-4xl mx-auto"
-        style="font-size: clamp(16px, 2vw, 22px)"
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias explicabo reprehenderit
-        ab at sequi maxime accusantium atque possimus! Voluptatibus, exercitationem?
+      <p class="text-center text-gray-500 max-w-4xl mx-auto clamp-text-sm">
+        آلاف التجّار بدأوا رحلتهم، بنوا متاجرهم، وتوسّعوا بسرعة مع منصة واحدة تدعم نموهم من أول
+        يوم.كل ما تحتاجه لإطلاق متجرك، إدارة عملياتك، وزيادة مبيعاتك في مكان واحد.
       </p>
 
       <article

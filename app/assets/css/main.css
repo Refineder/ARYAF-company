@@ -129,6 +129,24 @@
   background: linear-gradient(45deg, #e12afb, #8e51ff);
 }
 
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, currentColor 1px, transparent 1px),
+    linear-gradient(to bottom, currentColor 1px, transparent 1px);
+  background-size: 3rem 3rem;
+}
+
+@utility mask-fade {
+  -webkit-mask-image: radial-gradient(
+    ellipse 50% 50% at 50% 50%,
+    #000 0%,
+    #000 35%,
+    transparent 100%
+  );
+
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 0%, #000 35%, transparent 100%);
+}
+
 @font-face {
   font-family: 'IBM Plex Sans Arabic';
   src: url('~/assets/fonts/IBMPlexSansArabic-Thin.ttf') format('truetype');
@@ -216,20 +234,14 @@ body {
   background-clip: text;
 }
 
-@utility bg-grid {
-  background-image:
-    linear-gradient(to right, currentColor 1px, transparent 1px),
-    linear-gradient(to bottom, currentColor 1px, transparent 1px);
-  background-size: 3rem 3rem;
+.clamp-text-lg {
+  font-size: clamp(25px, 5vw, 68px);
 }
 
-@utility mask-fade {
-  -webkit-mask-image: radial-gradient(
-    ellipse 50% 50% at 50% 50%,
-    #000 0%,
-    #000 35%,
-    transparent 100%
-  );
+.clamp-text-md {
+  font-size: clamp(22px, 3vw, 48px);
+}
 
-  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 0%, #000 35%, transparent 100%);
+.clamp-text-sm {
+  font-size: clamp(15px, 3vw, 24px);
 }

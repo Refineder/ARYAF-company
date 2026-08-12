@@ -2,6 +2,7 @@
 import { ideaLeft, ideaRight } from '~/assets/images'
 import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
 import Button from '~/components/atoms/Button/Button.vue'
+import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
 </script>
 
 <template>
@@ -14,21 +15,14 @@ import Button from '~/components/atoms/Button/Button.vue'
     </div>
 
     <div class="flex flex-col justify-center items-center gap-4">
-      <h2 class="font-semibold" style="font-size: clamp(22px, 3vw, 38px)">
+      <h2 class="font-semibold clamp-text-md">
         <span class="gradient-text">من فكرة بسيطة،</span> إلى متجر ناجح
       </h2>
-      <p class="max-w-3xl text-gray-500 text-center" style="font-size: clamp(13px, 3vw, 24px)">
+      <p class="max-w-3xl text-gray-500 text-center clamp-text-sm">
         ARYAF تمنحك طريقة أسرع وأسهل لبناء متجرك الإلكتروني.أنشئ موقعك، أطلق متجرك، وابدأ البيع خلال
         دقائق باستخدام أدوات ذكية وقوالب احترافية جاهزة.
       </p>
-      <Button size="lg">
-        <div class="flex items-center gap-4 font-normal">
-          أنشئ متجرك مجاناً
-          <div class="bg-white p-2 w-fit rounded-full">
-            <Icons name="arrowLeftGradient" />
-          </div>
-        </div>
-      </Button>
+      <ButtonWithIcon icon-name="arrowLeftGradient"> أنشئ متجرك مجاناً </ButtonWithIcon>
     </div>
   </section>
 </template>

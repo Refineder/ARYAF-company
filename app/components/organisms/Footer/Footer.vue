@@ -16,10 +16,8 @@ import Button from '~/components/atoms/Button/Button.vue'
   <footer class="bg-secondary-dark pt-20 pb-10">
     <section class="section-container flex flex-col gap-20 text-white">
       <article class="flex flex-col items-center gap-4 border-b border-b-indigo-950 pb-10">
-        <h2 style="font-size: clamp(18px, 5vw, 48px)">جاهز تبدأ تجارتك في المكان الصح؟</h2>
-        <p style="font-size: clamp(15px, 3vw, 24px)">
-          تزيد احتمالية نجاح التجّار مع ارياف بنسبة 250%
-        </p>
+        <h2 class="clamp-text-md">جاهز تبدأ تجارتك في المكان الصح؟</h2>
+        <p class="clamp-text-sm">تزيد احتمالية نجاح التجّار مع ارياف بنسبة 250%</p>
         <p class="font-light text-gray-300 max-w-lg text-center">
           التجارة مو صعبة إذا بدأتها من المكان الصح، هنا تلقى الحلول والدعم والمجتمع اللي بيساعدك
           تغيّر حياتك.

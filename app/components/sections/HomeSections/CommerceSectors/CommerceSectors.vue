@@ -5,7 +5,7 @@ import { COMMERCE_DATA } from '~/constants/commerce'
 
 <template>
   <section class="section-container py-10 flex flex-col gap-6">
-    <h2 class="text-center font-semibold" style="font-size: clamp(24px, 5vw, 38px)">
+    <h2 class="text-center font-semibold clamp-text-md">
       انطلق بتجارتك<span class="gradient-text">, مهما كان قطاعك</span>
     </h2>
     <article class="grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))">

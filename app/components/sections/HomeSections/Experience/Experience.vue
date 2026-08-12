@@ -16,7 +16,7 @@ const scroll = (direction: 'next' | 'prev') => {
 <template>
   <section class="section-container flex flex-col gap-6 py-10 bg-white">
     <article class="flex flex-wrap items-center justify-between gap-4">
-      <h2 class="font-semibold" style="font-size: clamp(22px, 3vw, 38px)">
+      <h2 class="font-semibold clmap-text-md">
         انطلق بتجارتك<span class="gradient-text">،مهما كان قطاعك</span>
       </h2>
       <div class="flex gap-2 items-center">

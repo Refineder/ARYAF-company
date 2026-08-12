@@ -7,12 +7,10 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
 <template>
   <section class="section-container flex flex-col justify-between gap-6 rounded-lg p-4 md:flex-row">
     <article class="self-center flex flex-col gap-6 basis-[50%]">
-      <h2 class="font-semibold" style="font-size: clamp(24px, 3vw, 38px)">
-        حيث تلتقي السهولة بالأناقة
-      </h2>
-      <p style="font-size: clamp(16px, 2vw, 22px)">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum repellendus in minus
-        autem earum, delectus commodi neque incidunt aliquid.
+      <h2 class="font-semibold clamp-text-md">حيث تلتقي السهولة بالأناقة</h2>
+      <p class="clamp-text-sm">
+        حقِّق نمو علامتك التجارية في سوق الأزياء والعبايات مع حلول نُسجت بعناية لتسهِّل إدارة متجرك
+        وتقدِّم تجربة تسوُّق استثنائية لعملائك.
       </p>
 
       <ul class="flex flex-col gap-4">
@@ -26,7 +24,7 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
           <div class="p-3 rounded-md bg-accent">
             <Icons name="creditCard" />
           </div>
-          <p class="text-lg">قدم تجربة شراء سهلة ومألوفة لكل عميل</p>
+          <p class="text-lg">قدِّم تجربة شراء سهلة ومألوفة لكل عميل</p>
         </li>
         <li class="flex items-center gap-4">
           <div class="p-3 rounded-md bg-accent">
@@ -37,7 +35,7 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
       </ul>
 
       <ButtonWithIcon icon-name="arrowLeftGradient" size="lg" class="w-fit"
-        >أنشئ متجرك مجانا</ButtonWithIcon
+        >أنشئ متجرك مجاناً</ButtonWithIcon
       >
     </article>
     <article class="flex flex-col gap-4 basis-[40%]">

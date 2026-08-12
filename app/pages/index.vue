@@ -6,6 +6,7 @@ import Hero from '~/components/sections/HomeSections/HeroSection/Hero.vue'
 import Marquee from '~/components/sections/HomeSections/MarqueeSlider/Marquee.vue'
 import Sale from '~/components/sections/HomeSections/Sale/Sale.vue'
 import SimpleIdea from '~/components/sections/HomeSections/SimpleIdea/SimpleIdea.vue'
+import Soluations from '~/components/sections/HomeSections/Soluations/Soluations.vue'
 import Statistices from '~/components/sections/HomeSections/Statistices/Statistices.vue'
 </script>
 <template>
@@ -17,4 +18,5 @@ import Statistices from '~/components/sections/HomeSections/Statistices/Statisti
   <Sale />
   <Statistices />
   <CommerceSectors />
+  <Soluations />
 </template>

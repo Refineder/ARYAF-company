@@ -6,7 +6,7 @@ import { CARD_SUCCESS_DATA } from '~/constants/needToSuccess'
 <template>
   <section class="section-spacing-top flex flex-col gap-8 bg-white p-8 rounded-lg">
     <article class="flex flex-wrap justify-between gap-4 items-center">
-      <h2 class="font-semibold" style="font-size: clamp(22px, 3vw, 38px)">
+      <h2 class="font-semibold clamp-text-md">
         <span class="gradient-text">كل ما تحتاجه للنجاح ،</span>على الإنترنت
       </h2>
       <div class="flex gap-2 items-center">
