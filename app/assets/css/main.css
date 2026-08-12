@@ -203,6 +203,21 @@
   font-display: swap;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: var(--primary);
+border-radius: 100px;
+}
+
 body {
   background-color: var(--background);
   overflow-x: hidden;

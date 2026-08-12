@@ -14,23 +14,23 @@ const currentTab = computed(() => SOLUTION_TABS[activeTabIndex.value] || SOLUTIO
       <h2 class="text-center font-semibold clamp-text-md">
         حلول ارياف تدعمك <span class="gradient-text">بكل خطوة من مشوارك التجاري</span>
       </h2>
-      <article
-        class="rounded-full p-1 bg-background flex items-center gap-2 self-center overflow-x-auto"
-      >
-        <button
-          v-for="(tab, index) in SOLUTION_TABS"
-          :key="index"
-          type="button"
-          style="min-width: fit-content"
-          class="rounded-full cursor-pointer px-6 py-2 transition-colors duration-200"
-          :class="[
-            activeTabIndex === index ? 'gradient-bg text-white' : 'bg-accent hover:opacity-90',
-          ]"
-          @click="activeTabIndex = index"
-        >
-          {{ tab.label }}
-        </button>
-      </article>
+      <div class="overflow-x-auto md:w-fit md:mx-auto rounded-full py-1 px-2 bg-background">
+        <article class="flex items-center gap-2 max-w-3xl self-center">
+          <button
+            v-for="(tab, index) in SOLUTION_TABS"
+            :key="index"
+            type="button"
+            style="min-width: fit-content"
+            class="rounded-full cursor-pointer px-6 py-2 transition-colors duration-200"
+            :class="[
+              activeTabIndex === index ? 'gradient-bg text-white' : 'bg-accent hover:opacity-90',
+            ]"
+            @click="activeTabIndex = index"
+          >
+            {{ tab.label }}
+          </button>
+        </article>
+      </div>
       <article
         v-if="currentTab"
         class="flex flex-col justify-between gap-2 bg-background rounded-lg p-2 section-container-md lg:flex-row"
