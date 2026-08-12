@@ -4,6 +4,7 @@ import CommerceSectors from '~/components/sections/HomeSections/CommerceSectors/
 import Experience from '~/components/sections/HomeSections/Experience/Experience.vue'
 import Hero from '~/components/sections/HomeSections/HeroSection/Hero.vue'
 import Marquee from '~/components/sections/HomeSections/MarqueeSlider/Marquee.vue'
+import MoreFromTool from '~/components/sections/HomeSections/MoreFromTool/MoreFromTool.vue'
 import Sale from '~/components/sections/HomeSections/Sale/Sale.vue'
 import SimpleIdea from '~/components/sections/HomeSections/SimpleIdea/SimpleIdea.vue'
 import Soluations from '~/components/sections/HomeSections/Soluations/Soluations.vue'
@@ -21,4 +22,5 @@ import Stories from '~/components/sections/HomeSections/Stories/Stories.vue'
   <CommerceSectors />
   <Soluations />
   <Stories />
+  <MoreFromTool />
 </template>
