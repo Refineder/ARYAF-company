@@ -48,6 +48,8 @@ import soluation from '~/assets/images/home/soluations/soluation.webp'
 import story1 from '~/assets/images/home/stories/story-1.png'
 import story2 from '~/assets/images/home/stories/story-2.jpg'
 
+import loginHero from '~/assets/images/login/login-hero.png'
+
 export {
   logo,
   chinaFlag,
@@ -89,3 +91,5 @@ export { commerceAim, commerceArrow, commerceDevelop, commerceIdea }
 export { soluation }
 
 export { story1, story2 }
+
+export {loginHero}

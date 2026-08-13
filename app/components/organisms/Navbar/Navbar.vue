@@ -164,6 +164,7 @@ const navRef = ref<HTMLElement | null>(null)
 const activeLabel = ref<string | null>(null)
 const mobileOpen = ref<boolean>(false)
 const mobileAccordion = ref<string | null>(null)
+const router = useRouter()
 
 const activeItem = computed<INavbarItem | null>(() => {
   if (!activeLabel.value) return null
@@ -201,6 +202,14 @@ const handleKeydown = (event: KeyboardEvent) => {
   if (event.key === 'Escape') closeAll()
 }
 
+const goToLogin = () => {
+  router.push('/login');
+}
+
+const goToHome = () => {
+  router.push("/")
+}
+
 onMounted(() => {
   document.addEventListener('click', handleOutsideClick)
   document.addEventListener('keydown', handleKeydown)
@@ -218,11 +227,11 @@ onBeforeUnmount(() => {
     class="section-container sticky top-5 z-50 mb-10 border border-zinc-300 rounded-full backdrop-blur-md"
   >
     <article class="flex justify-between items-center px-4 py-3 gap-3">
-      <ul class="flex items-center gap-2 shrink-0">
+      <ul class="flex items-center gap-2 shrink-0 cursor-pointer"  @click="goToHome">
         <li>
           <img class="w-10" :src="logo" alt="logo" />
         </li>
-        <li>
+        <li class="">
           <p class="text-lg font-semibold">ارياف</p>
         </li>
       </ul>
@@ -256,7 +265,7 @@ onBeforeUnmount(() => {
 
       <div class="flex items-center gap-2 md:gap-4 shrink-0">
         <p class="gradient-text font-semibold text-lg hidden md:block">EN</p>
-        <Button variant="outline" class="hidden md:block"> تسجيل الدخول </Button>
+        <Button variant="outline" class="hidden md:block" @click="goToLogin"> تسجيل الدخول </Button>
         <Button> أنشئ متجرك </Button>
         <button
           class="lg:hidden cursor-pointer rounded-full p-2 hover:bg-secondary/70 transition-colors duration-200"

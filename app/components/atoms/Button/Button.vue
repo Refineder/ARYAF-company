@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Component } from 'vue'
 
-type TVariant = 'default' | 'outline'
+type TVariant = 'default' | 'outline-gradient' | 'secondary' | 'outline'
 export type TSize = 'sm' | 'md' | 'lg'
 interface IProps {
   variant?: TVariant
@@ -10,9 +10,13 @@ interface IProps {
   icon?: boolean
 }
 
+const attrs = useAttrs();
+
 const variantClasses: Record<TVariant, string> = {
   default: 'gradient-bg text-white',
-  outline: 'gradient-border-bg',
+  'outline-gradient': 'gradient-border-bg',
+  outline: 'border border-gray-500',
+  secondary: 'bg-secondary text-gray-500',
 }
 
 const sizeClasses: Record<TSize, string> = {
@@ -30,6 +34,7 @@ const props = withDefaults(defineProps<IProps>(), {
 
 <template>
   <button
+  v-bind="attrs"
     :class="
       'cursor-pointer px-4 py-2 rounded-full font-semibold ' +
       variantClasses[props.variant] +
@@ -39,6 +44,6 @@ const props = withDefaults(defineProps<IProps>(), {
       props.class
     "
   >
-    <p :class="props.variant === 'outline' ? 'gradient-text ' : ''"><slot /></p>
+    <p :class="props.variant === 'outline-gradient' ? 'gradient-text ' : ''"><slot /></p>
   </button>
 </template>

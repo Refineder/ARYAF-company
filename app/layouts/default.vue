@@ -2,6 +2,8 @@
 import Footer from '~/components/organisms/Footer/Footer.vue'
 import Navbar from '~/components/organisms/Navbar/Navbar.vue'
 
+const route = useRoute();
+
 useSeoMeta({
   title: 'ARYAF - Home',
   description: 'This is the homepage of ARYAF.',
@@ -27,14 +29,17 @@ useHead({
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative"
+  >
     <Navbar />
     <main>
       <slot />
     </main>
     <div
+    v-if="['/', '/login'].includes(route.path)"
       class="bg-grid bg-accent mask-fade absolute w-full h-[130vh] top-0 -z-10 text-primary/30"
     ></div>
     <Footer />
   </div>
 </template>
+

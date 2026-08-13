@@ -102,7 +102,7 @@
 }
 
 @utility gradient-bg {
-  background: var(--primary);
+  background: var(--primary-gradient);
 }
 
 @utility gradient-bg-pink {
@@ -240,6 +240,10 @@ body {
 
 .section-spacing-top {
   margin-top: 1rem;
+}
+
+.input-wrapper {
+  @apply border-[1px] border-gray-300
 }
 
 .gradient-text {
