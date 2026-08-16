@@ -6,8 +6,8 @@ import InputForm from '~/components/molecules/InputForm/InputForm.vue'
 import * as yup from 'yup'
 import { toTypedSchema } from '@vee-validate/yup'
 import Button from '~/components/atoms/Button/Button.vue'
-import OtpVerification from '~/components/organisms/LoginSections/OtpVerification/OtpVerification.vue'
-import PasswordRecovery from '~/components/organisms/LoginSections/PasswordRecovery/PasswordRecovery.vue'
+import OtpVerification from '~/components/organisms/Login/OtpVerification/OtpVerification.vue'
+import PasswordRecovery from '~/components/organisms/Login/PasswordRecovery/PasswordRecovery.vue'
 
 const ui = reactive({
   activeTab: 'password' as 'password' | 'otp',
@@ -65,12 +65,14 @@ const onRecoverSubmit = (values: unknown) => {
 }
 
 const goToHome = () => router.push('/')
+const goToSignup = () => router.push('/signup')
 </script>
 
 <template>
   <section class="py-20 bg-secondary-dark rounded-2xl m-2">
     <div
-      class="z-20 relative section-container flex flex-col gap-6 justify-between md:gap-0 md:flex-row"
+      class="z-20 relative section-container grid"
+      style="grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr))"
     >
       <article
         class="flex w-full flex-col gap-6 bg-white/95 p-8 rounded-lg md:rounded-none md:rounded-r-lg"
@@ -169,7 +171,12 @@ const goToHome = () => router.push('/')
               >
             </form>
             <div class="flex flex-wrap items-center justify-center">
-              <p>ليس لديك حساب؟</p>
+              <p>
+                ليس لديك حساب؟
+                <span class="gradient-text cursor-pointer font-semibold" @click="goToSignup"
+                  >انشاء حساب جديد</span
+                >
+              </p>
             </div>
           </template>
 

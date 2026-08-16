@@ -35,10 +35,12 @@ useHead({
     <main>
       <slot />
     </main>
-    <div
-    v-if="['/'].includes(route.path)"
+
+          <div
+      v-if="['/'].includes(route.path)"
       class="bg-grid bg-accent mask-fade absolute w-full h-[130vh] top-0 -z-10 text-primary/30"
     ></div>
+    
     <Footer />
   </div>
 </template>

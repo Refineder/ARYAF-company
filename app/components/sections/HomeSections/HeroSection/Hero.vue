@@ -23,7 +23,9 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
       <div class="flex items-center justify-center gap-6 flex-wrap sm:justify-start">
         <ButtonWithIcon icon-name="arrowLeftGradient" size="lg"> أنشئ متجرك مجاناً </ButtonWithIcon>
 
-        <Button size="lg" variant="outline">اكتشف المتجر التجريبي</Button>
+        <Button size="lg" variant="outline-gradient" class="backdrop-blur-md"
+          >اكتشف المتجر التجريبي</Button
+        >
       </div>
     </article>
 

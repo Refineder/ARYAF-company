@@ -384,7 +384,7 @@ onBeforeUnmount(() => {
       </ul>
 
       <div class="flex flex-col gap-2 pt-2 border-t border-zinc-200">
-        <Button variant="outline"> تسجيل الدخول </Button>
+        <Button variant="outline" @click="goToLogin"> تسجيل الدخول </Button>
         <Button> أنشئ متجرك </Button>
       </div>
     </article>

@@ -1,0 +1,5 @@
+.plan .advertisement {
+  offset-path: border-box;
+  offset-distance: calc(100% / 4 / 2);
+  offset-rotate: 0deg;
+}

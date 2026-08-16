@@ -240,7 +240,7 @@ body {
 }
 
 .section-container-lg {
-  width: min(100% - 1rem, 1550px);
+  width: min(100% - 1rem, 1660px);
   margin-inline: auto;
 }
 
@@ -249,7 +249,7 @@ body {
   margin-inline: auto;
 }
 
-.section-container-md {
+.section-container-sm {
   width: min(100% - 2.5rem, 1250px);
   margin-inline: auto;
 }
