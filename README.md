@@ -2,6 +2,16 @@
 
 A modern, high-performance web application for **ARYAF**, built with **Nuxt 4**, **Vue 3**, **TypeScript**, and **Tailwind CSS v4**. The platform provides e-commerce solutions, merchant success stories, interactive features, and flexible business growth tools tailored for modern merchants.
 
+This is the public company/marketing website. It is separate from the authenticated Super Admin, Tenant Dashboard and tenant Storefront applications. Read the workspace [`AGENTS.md`](../../AGENTS.md) before changing shared product claims, links, branding or platform behavior.
+
+## Platform boundaries
+
+- Do not implement authenticated merchant or platform-operator workflows here; link to the appropriate production application.
+- Keep Arabic RTL as the primary experience and verify English/LTR whenever localized content is added.
+- Do not copy API keys, analytics secrets or production service credentials into public Nuxt runtime configuration.
+- Product claims must match capabilities that are actually released across the Aryaf API and applications.
+- Reuse the established design tokens, icon system and component hierarchy before adding a new visual pattern.
+
 ---
 
 ## 📋 System Requirements & Version Specifications
