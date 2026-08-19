@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { useField } from 'vee-validate'
 import './form.css'
-import Icons, { type TNameIcon } from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
+import Icons, { type TNameIcon } from '~/components/atoms/ARYAFIcon/Icons.vue'
 
 interface IProps {
   name: string
@@ -15,9 +15,9 @@ interface IProps {
 
 const props = defineProps<IProps>()
 
-const { value, errorMessage } = useField<string>(() => props.name)
+const id = useId()
 
-const randomID = Math.random() * 1000 + new Date().getTime().toString()
+const { value, errorMessage } = useField<string>(() => props.name)
 
 const showPassword = ref(false)
 
@@ -39,7 +39,7 @@ const toggleVisibility = () => {
       v-if="lable"
       class="text-lg text-zinc-500"
       :class="[errorMessage ? 'text-rose-500!' : '']"
-      :for="randomID"
+      :for="id"
       >{{ lable }}</label
     >
 
@@ -52,16 +52,16 @@ const toggleVisibility = () => {
     >
       <div
         v-if="icon"
-        class="basis-8 cursor-pointer"
+        class="cursor-pointer"
         :class="isPassword ? 'cursor-pointer' : 'cursor-default'"
         role="button"
         :aria-label="isPassword && showPassword ? 'إخفاء كلمة المرور' : 'إظهار كلمة المرور'"
         @click="toggleVisibility"
       >
-        <Icons :name="icon" color-stroke="#254da6" />
+        <Icons :name="icon" />
       </div>
       <input
-        :id="randomID"
+        :id="id"
         v-model="value"
         class="grow outline-0 min-w-12 caret-primary-foreground"
         :type="effectiveType"

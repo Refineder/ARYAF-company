@@ -1,14 +1,6 @@
-/* .input-wrapper {
-  @apply border border-gray-500
-} */
-
 .input-wrapper:has(input:focus) {
   border: 1px solid transparent;
   background:
     linear-gradient(var(--card), var(--card)) padding-box,
     var(--primary-gradient) border-box;
-}
-
-.input-wrapper input {
-  min-width: fit-content;
 }

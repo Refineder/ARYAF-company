@@ -178,7 +178,6 @@ const toggleItem = (item: INavbarItem) => {
 const toggleMobileMenu = () => {
   mobileOpen.value = !mobileOpen.value
   activeLabel.value = null
-  console.log('click')
 }
 
 const toggleMobileAccordion = (item: INavbarItem) => {

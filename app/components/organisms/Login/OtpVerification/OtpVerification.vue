@@ -79,7 +79,7 @@ onMounted(() => {
         v-for="(_, index) in otpDigits"
         :key="index"
         :ref="setOtpInputRef(index)"
-        :model-value="otpDigits[index]"
+        :model-value="otpDigits[index] ?? ''"
         :invalid="otpStatus === 'wrong'"
         @update:model-value="onOtpInput(index, $event)"
         @keydown="onOtpKeydown(index, $event)"

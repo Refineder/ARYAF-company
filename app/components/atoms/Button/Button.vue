@@ -6,11 +6,10 @@ export type TSize = 'sm' | 'md' | 'lg'
 interface IProps {
   variant?: TVariant
   size?: TSize
-  class?: string
   icon?: boolean
 }
 
-const attrs = useAttrs();
+const attrs = useAttrs()
 
 const variantClasses: Record<TVariant, string> = {
   default: 'gradient-bg text-white',
@@ -34,16 +33,14 @@ const props = withDefaults(defineProps<IProps>(), {
 
 <template>
   <button
-  v-bind="attrs"
-    :class="
-      'cursor-pointer px-4 py-2 rounded-full font-semibold ' +
-      variantClasses[props.variant] +
-      ' ' +
-      sizeClasses[props.size] +
-      ' ' +
-      props.class
-    "
+    v-bind="attrs"
+    :class="[
+      'cursor-pointer px-4 py-2 rounded-full font-semibold',
+      variantClasses[props.variant],
+      sizeClasses[props.size],
+    ]"
   >
-    <p :class="props.variant === 'outline-gradient' ? 'gradient-text ' : ''"><slot /></p>
+    <p v-if="props.variant === 'outline-gradient'" class="gradient-text"><slot /></p>
+    <slot v-else />
   </button>
 </template>

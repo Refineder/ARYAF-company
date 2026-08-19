@@ -6,7 +6,7 @@ import StoreSetup from '~/components/organisms/Signup/StoreSetup/StoreSetup.vue'
 import PricingPlans from '~/components/organisms/Signup/PricingPlans/PricingPlans.vue'
 import BusinessVerification from '~/components/organisms/Signup/BusinessVerification/BusinessVerification.vue'
 import StartNow from '~/components/organisms/Signup/StartNow/StartNow.vue'
-import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
+import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 
 const steps = [
   { key: 1, label: 'بيانات المستخدم' },

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { saleBig, saleSmall } from '~/assets/images'
-import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
+import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
 </script>
 

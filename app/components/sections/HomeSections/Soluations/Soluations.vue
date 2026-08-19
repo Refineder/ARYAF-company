@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { SOLUTION_TABS } from '~/constants/soluations'
-import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
+import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
 
 const activeTabIndex = ref(0)

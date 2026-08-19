@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { hero, hero1, hero2, hero3 } from '~/assets/images'
-import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
+import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import Button from '~/components/atoms/Button/Button.vue'
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
 </script>

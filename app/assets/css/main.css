@@ -46,6 +46,7 @@
 }
 
 :root {
+  --font-sans: 'IBM Plex Sans Arabic', sans-serif;
   --radius: 0.625rem;
   --background: hsl(210, 40%, 98.04%);
   --foreground: oklch(0.145 0 0);
@@ -58,14 +59,13 @@
   --secondary: hsl(222, 38.46%, 94.9%);
   --secondary-dark: #000c28;
   --secondary-foreground: hsl(0, 0%, 40%);
-  --muted: hsl(210, 40%, 98.04%);
+  --muted: hsl(from var(--primary) h s 97%);
   --muted-foreground: hsl(215.17, 12.13%, 46.86%);
   --accent: hsl(220.65, 68.89%, 91.18%);
   --accent-foreground: hsl(221.21, 83.19%, 53.33%);
   --destructive: oklch(0.577 0.245 27.325);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  --font-sans: 'IBM Plex Sans Arabic', sans-serif;
 
   /* Not use yet */
   --sidebar: oklch(0.985 0 0);
@@ -91,13 +91,13 @@
 @utility gradient-border-bg {
   border: 3px solid transparent;
   background:
-    linear-gradient(var(--background), var(--background)) padding-box,
+    linear-gradient(oklch(from var(--background) l c h) 0 0) padding-box,
     var(--primary-gradient) border-box;
 }
 @utility gradient-border-card {
   border: 3px solid transparent;
   background:
-    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(oklch(from var(--card) l c h) 0 0) padding-box,
     var(--primary-gradient) border-box;
 }
 
@@ -137,30 +137,7 @@
 }
 
 @utility mask-fade {
-  /* -webkit-mask-image: radial-gradient(
-    ellipse 50% 50% at 50% 50%,
-    #000 0%,
-    #000 35%,
-    transparent 100%
-  );
-
-  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 0%, #000 35%, transparent 100%); */
-
-    -webkit-mask-image: radial-gradient(
-    ellipse 55% 55% at 50% 40%,
-    #000 0%,
-    #000 40%,
-    transparent 100%
-  );
-
-  mask-image: radial-gradient(
-    ellipse 55% 55% at 50% 40%,
-    #000 0%,
-    #000 40%,
-    transparent 100%
-  );
-
-
+  mask-image: radial-gradient(ellipse 55% 55% at 50% 40%, #000 0%, #000 40%, transparent 100%);
 }
 
 @font-face {
@@ -230,12 +207,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: var(--primary);
-border-radius: 100px;
+  background-color: var(--primary);
+  border-radius: 100px;
 }
 
 body {
-  /* background-color: var(--background); */
   overflow-x: hidden;
 }
 
@@ -259,7 +235,7 @@ body {
 }
 
 .input-wrapper {
-  @apply border-[1px] border-gray-300
+  @apply border-[1px] border-gray-300;
 }
 
 .gradient-text {

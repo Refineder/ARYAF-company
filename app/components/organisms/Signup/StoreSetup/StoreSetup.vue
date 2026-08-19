@@ -5,7 +5,7 @@ import { toTypedSchema } from '@vee-validate/yup'
 import InputForm from '~/components/molecules/InputForm/InputForm.vue'
 import SelectForm from '~/components/molecules/SelectForm/SelectForm.vue'
 import Button from '~/components/atoms/Button/Button.vue'
-import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
+import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import { CATEGORIES, COUNTRIES, CURRENCIES, LANGUAGES, TEMPLATES } from '~/constants/storeSetup'
 
 const emit = defineEmits<{ next: [] }>()
@@ -77,7 +77,7 @@ const onSubmit = handleSubmit(() => {
             ]"
             @click="template = t.value"
           >
-            <span class="w-full aspect-[4/3] rounded-sm block" :style="{ background: t.color }" />
+            <span class="w-full aspect-4/3 rounded-sm block" :style="{ background: t.color }" />
             <span class="flex items-center gap-1.5">
               <div v-if="template === t.value" class="absolute top-1 left-1">
                 <div

@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import type { TName } from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
-import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
+import Icons, { type TNameIcon } from '~/components/atoms/ARYAFIcon/Icons.vue'
 import Button, { type TSize } from '~/components/atoms/Button/Button.vue'
 
 interface IProps {
-  iconName: TName
+  iconName: TNameIcon
   size?: TSize
   class?: string
 }

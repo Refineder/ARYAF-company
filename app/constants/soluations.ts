@@ -1,8 +1,9 @@
-import type { TName } from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
+
 import { soluation } from '~/assets/images'
+import type { TNameIcon } from '~/components/atoms/ARYAFIcon/Icons.vue'
 
 export interface ISolutionFeature {
-  icon: TName
+  icon: TNameIcon
   text: string
 }
 

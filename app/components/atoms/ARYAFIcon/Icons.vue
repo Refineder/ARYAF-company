@@ -22,9 +22,12 @@ interface IProps {
   width?: number
   class?: string
   height?: number
+  colorStroke?: string
 }
 
-const props = defineProps<IProps>()
+const props = withDefaults(defineProps<IProps>(), {
+  colorStroke: 'currentColor',
+})
 </script>
 
 <template>
@@ -42,14 +45,6 @@ const props = defineProps<IProps>()
     />
   </svg>
 
-  <!-- <div  
-          
-                    :class="[
-  'rounded-full gradient-bg flex transition-all items-center justify-center',
-  `w-${width || 5}`,
-  `h-${height || 5}`,
-]"
-                    > -->
   <svg
     v-if="name === 'check'"
     class="text-white"

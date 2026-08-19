@@ -9,7 +9,7 @@ import Button from '~/components/atoms/Button/Button.vue'
 import OtpInput from '~/components/molecules/OtpInput/OtpInput.vue'
 import './style.css'
 import { COUNTRIES } from '~/constants/countries'
-import Icons from '~/components/atoms/Button/ARYAFIcon/Icons.vue'
+import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 
 const emit = defineEmits<{ next: [] }>()
 
@@ -26,7 +26,6 @@ const { handleSubmit, errors, meta } = useForm({
 
 const onSubmit = handleSubmit((values) => {
   if (phoneError.value) return
-  console.log('values : ', values)
   view.value = 'otp'
 })
 
@@ -193,7 +192,7 @@ const isValid = computed(() => {
         v-for="(_, index) in otpDigits"
         :key="index"
         :ref="setOtpInputRef(index)"
-        :model-value="otpDigits[index]"
+        :model-value="otpDigits[index] ?? ''"
         :invalid="otpStatus === 'wrong'"
         @update:model-value="onOtpInput(index, $event)"
         @keydown="onOtpKeydown(index, $event)"

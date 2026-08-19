@@ -72,7 +72,7 @@ const goToSignup = () => router.push('/signup')
   <section class="py-20 bg-secondary-dark rounded-2xl m-2">
     <div
       class="z-20 relative section-container grid"
-      style="grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr))"
+      style="grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr))"
     >
       <article
         class="flex w-full flex-col gap-6 bg-white/95 p-8 rounded-lg md:rounded-none md:rounded-r-lg"
