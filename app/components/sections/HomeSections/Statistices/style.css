@@ -1,0 +1,51 @@
+@property --num-counting {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.counting {
+  counter-reset: num var(--num-counting);
+  animation: countUp 3s ease-out forwards;
+}
+
+.animate-on-scroll {
+  transition:
+    opacity 0.4s ease-out,
+    scale 0.4s ease-out;
+  opacity: 0;
+  scale: 0.8;
+}
+
+.animate-on-scroll.show {
+  opacity: 1;
+  scale: 1;
+}
+
+.counting {
+  animation-play-state: paused;
+}
+.animate-on-scroll.show .counting {
+  animation-play-state: running;
+}
+
+.buyers-counting::before {
+  content: counter(num) '+';
+}
+
+.sales-counting::before {
+  content: counter(num) '+ مليار';
+}
+
+.client-counting::before {
+  content: counter(num) '+ مليون';
+}
+
+@keyframes countUp {
+  from {
+    --num-counting: 0;
+  }
+  to {
+    --num-counting: var(--num);
+  }
+}

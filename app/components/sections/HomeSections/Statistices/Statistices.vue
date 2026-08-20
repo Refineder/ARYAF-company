@@ -1,5 +1,31 @@
 <script setup lang="ts">
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
+import './style.css'
+
+let observer: IntersectionObserver | null = null
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show')
+        } else {
+          entry.target.classList.remove('show')
+        }
+      })
+    },
+    {
+      threshold: 0.4,
+    }
+  )
+  const elements = document.querySelectorAll('.animate-on-scroll')
+  elements.forEach((el) => observer?.observe(el))
+})
+
+onBeforeUnmount(() => {
+  observer?.disconnect()
+})
 </script>
 
 <template>
@@ -14,34 +40,46 @@ import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
       </p>
 
       <article
-        class="grid gap-4"
+        class="statistics-grid grid gap-4"
         style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"
       >
         <div
-          class="bg-background px-4 py-6 rounded-lg flex flex-col justify-center items-center gap-2"
+          class="bg-background animate-on-scroll px-4 py-6 rounded-lg flex flex-col justify-center items-center gap-2"
         >
           <div>
             <Icons name="storeGradient" />
           </div>
-          <h3 class="gradient-text font-semibold text-3xl">+13,500</h3>
+          <!-- <h3 class="buyers-counting gradient-text font-semibold text-3xl">+13,500</h3> -->
+          <h3
+            class="buyers-counting counting gradient-text font-semibold text-3xl"
+            style="--num: 13500"
+          ></h3>
           <p class="gradient-text text-lg font-semibold">تاجر اختاروا ارياف</p>
         </div>
         <div
-          class="bg-background px-4 py-6 rounded-lg flex flex-col justify-center items-center gap-2"
+          class="bg-background animate-on-scroll px-4 py-6 rounded-lg flex flex-col justify-center items-center gap-2"
         >
           <div>
             <Icons name="hashGradient" />
           </div>
-          <h3 class="gradient-text font-semibold text-3xl">+10 مليار</h3>
+          <!-- <h3 class="sales-counting gradient-text font-semibold text-3xl">+10 مليار</h3> -->
+          <h3
+            class="sales-counting counting gradient-text font-semibold text-3xl"
+            style="--num: 10"
+          ></h3>
           <p class="gradient-text text-lg font-semibold">ريال مبيعات نفذت عبر متاجر ارياف</p>
         </div>
         <div
-          class="bg-background px-4 py-6 rounded-lg flex flex-col justify-center items-center gap-2"
+          class="bg-background animate-on-scroll px-4 py-6 rounded-lg flex flex-col justify-center items-center gap-2"
         >
           <div>
             <Icons name="userGradient" />
           </div>
-          <h3 class="gradient-text font-semibold text-3xl">+15 مليون</h3>
+          <!-- <h3 class="client-counting gradient-text font-semibold text-3xl">+15 مليون</h3> -->
+          <h3
+            class="client-counting counting gradient-text font-semibold text-3xl"
+            style="--num: 15"
+          ></h3>
           <p class="gradient-text text-lg font-semibold">عميل اشترى من متاجر مبنية على ارياف</p>
         </div>
       </article>
