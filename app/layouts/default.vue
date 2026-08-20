@@ -5,7 +5,7 @@ import Navbar from '~/components/organisms/Navbar/Navbar.vue'
 const route = useRoute();
 
 useSeoMeta({
-  title: 'ARYAF - auth',
+  title: 'ARYAF - Home',
   description: 'This is the auth page of ARYAF.',
 })
 
