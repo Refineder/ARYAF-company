@@ -49,8 +49,6 @@ To run this project smoothly, make sure your development environment matches or 
 
 ## ✨ Demo
 
-
-
 ---
 
 ## 🛠️ Getting Started
