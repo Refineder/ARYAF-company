@@ -41,7 +41,8 @@ const scroll = (direction: 'next' | 'prev') => {
     >
       <div
         v-for="data in EXPERIENCE_DATA"
-        class="snap-start shrink-0 w-[220px] p-4 rounded-lg border-[3px] border-transparent bg-background cursor-pointer hover:gradient-border-bg flex flex-col justify-center items-center gap-2"
+        :key="data.title"
+        class="snap-start shrink-0 w-55 p-4 rounded-lg border-[3px] border-transparent bg-background cursor-pointer hover:gradient-border-bg flex flex-col justify-center items-center gap-2"
       >
         <div>
           <img :src="data.thumb" :alt="data.title" />

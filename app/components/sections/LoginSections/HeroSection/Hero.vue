@@ -12,7 +12,7 @@ import PasswordRecovery from '~/components/organisms/Login/PasswordRecovery/Pass
 const ui = reactive({
   activeTab: 'password' as 'password' | 'otp',
   view: 'login' as 'login' | 'otp' | 'recover',
-  recoverTab: 'reset' as 'reset',
+  recoverTab: 'reset' as 'reset' | 'create',
 })
 
 const otpEmail = ref('')
@@ -78,7 +78,7 @@ const goToSignup = () => router.push('/signup')
         class="flex w-full flex-col gap-6 bg-white/95 p-8 rounded-lg md:rounded-none md:rounded-r-lg"
       >
         <div class="flex justify-between items-center gap-4 flex-wrap">
-          <div @click="goToHome" class="flex items-center gap-2 flex-wrap cursor-pointer">
+          <div class="flex items-center gap-2 flex-wrap cursor-pointer" @click="goToHome">
             <div>
               <img class="w-10" :src="logo" alt="logo" />
             </div>
@@ -162,9 +162,9 @@ const goToSignup = () => router.push('/signup')
                 ارسال رمز التحقق
               </Button>
               <div class="grid gap-3 items-center" style="grid-template-columns: 1fr auto 1fr">
-                <span class="w-full h-px bg-muted-foreground inline-block" />
+                <span class="w-full h-px bg-muted-foreground inline-block"></span>
                 <p>أو</p>
-                <span class="w-full h-px bg-muted-foreground inline-block" />
+                <span class="w-full h-px bg-muted-foreground inline-block"></span>
               </div>
               <Button size="lg" variant="outline" type="button"
                 >تسجيل الدخول باستخدام Google</Button

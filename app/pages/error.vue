@@ -23,6 +23,6 @@ const handleError = () => {
       {{ props.error.message }}
     </p>
 
-    <button @click="handleError" class="mt-6 px-5 py-3 bg-black text-white rounded">Go Home</button>
+    <button  class="mt-6 px-5 py-3 bg-black text-white rounded" @click="handleError">Go Home</button>
   </div>
 </template>

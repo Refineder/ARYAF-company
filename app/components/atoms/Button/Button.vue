@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { Component } from 'vue'
 
 type TVariant = 'default' | 'outline-gradient' | 'secondary' | 'outline'
 export type TSize = 'sm' | 'md' | 'lg'
@@ -40,7 +39,7 @@ const props = withDefaults(defineProps<IProps>(), {
       sizeClasses[props.size],
     ]"
   >
-    <p v-if="props.variant === 'outline-gradient'" class="gradient-text"><slot /></p>
-    <slot v-else />
+    <p v-if="props.variant === 'outline-gradient'" class="gradient-text"><slot></slot></p>
+    <slot v-else></slot>
   </button>
 </template>

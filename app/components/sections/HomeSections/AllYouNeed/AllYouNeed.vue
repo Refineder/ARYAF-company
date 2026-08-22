@@ -25,6 +25,7 @@ import { CARD_SUCCESS_DATA } from '~/constants/needToSuccess'
       >
         <div
           v-for="data in CARD_SUCCESS_DATA"
+          :key="data.title"
           class="bg-muted rounded-lg flex flex-col gap-4 px-8 py-4"
         >
           <div :class="'p-3 rounded-md w-fit ' + data.bgGradient">

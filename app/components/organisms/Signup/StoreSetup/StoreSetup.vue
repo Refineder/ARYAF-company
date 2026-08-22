@@ -77,7 +77,10 @@ const onSubmit = handleSubmit(() => {
             ]"
             @click="template = t.value"
           >
-            <span class="w-full aspect-4/3 rounded-sm block" :style="{ background: t.color }" />
+            <span
+              class="w-full aspect-4/3 rounded-sm block"
+              :style="{ background: t.color }"
+            ></span>
             <span class="flex items-center gap-1.5">
               <div v-if="template === t.value" class="absolute top-1 left-1">
                 <div

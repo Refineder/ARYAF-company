@@ -33,7 +33,7 @@ useHead({
   >
     <Navbar />
     <main>
-      <slot />
+      <slot ></slot>
     </main>
 
           <div

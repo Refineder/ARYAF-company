@@ -54,7 +54,7 @@ const onSubmit = () => {
         <div
           class="h-full gradient-bg transition-all duration-500"
           :style="{ width: progressPercent + '%' }"
-        />
+        ></div>
       </div>
     </div>
 

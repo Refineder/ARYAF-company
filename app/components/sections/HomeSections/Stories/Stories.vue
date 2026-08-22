@@ -35,16 +35,16 @@ const prev = () => {
           <button
             type="button"
             class="p-3 rounded-full bg-muted cursor-pointer hover:bg-accent transition-colors"
-            @click="prev"
             aria-label="السابق"
+            @click="prev"
           >
             <ArrowRight stroke-width="1" />
           </button>
           <button
             type="button"
             class="p-3 rounded-full bg-muted cursor-pointer hover:bg-accent transition-colors"
-            @click="next"
             aria-label="التالي"
+            @click="next"
           >
             <ArrowLeft stroke-width="1" />
           </button>
@@ -53,7 +53,7 @@ const prev = () => {
 
       <article
         ref="sliderRef"
-        class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         <div
           v-for="story in STORIES"

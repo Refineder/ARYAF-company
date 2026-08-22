@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import Footer from '~/components/organisms/Footer/Footer.vue'
-import Navbar from '~/components/organisms/Navbar/Navbar.vue'
-
-const route = useRoute()
 
 useSeoMeta({
   title: 'ARYAF - Auth',
@@ -31,7 +28,7 @@ useHead({
 <template>
   <div class="relative">
     <main>
-      <slot />
+      <slot></slot>
     </main>
     <div
       class="border-4 border-red-700 bg-grid mask-fade absolute w-full h-[130svh] top-0 z-10 text-accent"

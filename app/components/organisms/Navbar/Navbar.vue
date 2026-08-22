@@ -38,7 +38,6 @@ import {
   Layers2,
   LifeBuoy,
   Megaphone,
-  MegaphoneIcon,
   Menu,
   MessageCircleMore,
   MessagesSquare,
@@ -239,11 +238,11 @@ onBeforeUnmount(() => {
         <li
           v-for="item in NAVBAR_ITEMS"
           :key="item.label"
-          @click="toggleItem(item)"
           :class="
             'flex items-center gap-1 xl:gap-2 cursor-pointer rounded-full px-2 py-1 transition-colors duration-200 ' +
             (activeLabel === item.label ? 'bg-background' : 'hover:bg-secondary/70')
-          "
+            "
+          @click="toggleItem(item)"
         >
           <p
             :class="
@@ -268,8 +267,8 @@ onBeforeUnmount(() => {
         <Button> أنشئ متجرك </Button>
         <button
           class="lg:hidden cursor-pointer rounded-full p-2 hover:bg-secondary/70 transition-colors duration-200"
-          @click="toggleMobileMenu"
           aria-label="القائمة"
+          @click="toggleMobileMenu"
         >
           <Menu v-if="!mobileOpen" class="w-6 h-6" />
           <X v-else class="w-6 h-6" />
@@ -279,9 +278,9 @@ onBeforeUnmount(() => {
 
     <article
       :class="
-        'hidden section-container lg:grid gap-2 overflow-hidden bg-white absolute top-full left-[50%] -translate-x-[50%] mt-3 rounded-lg shadow-lg transition-all duration-300 origin-top ' +
+        'hidden section-container lg:grid gap-2 overflow-hidden bg-white absolute top-full left-[50%] translate-x-[-50%] mt-3 rounded-lg shadow-lg transition-all duration-300 origin-top ' +
         (activeLabel
-          ? 'max-h-[32rem] p-4 opacity-100 translate-y-0 overflow-y-auto'
+          ? 'max-h-32rem p-4 opacity-100 translate-y-0 overflow-y-auto'
           : 'max-h-0 p-0 opacity-0 pointer-events-none')
       "
       style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))"
@@ -327,8 +326,8 @@ onBeforeUnmount(() => {
           class="flex flex-col rounded-xl overflow-hidden"
         >
           <button
+          class="flex items-center justify-between gap-2 cursor-pointer rounded-xl px-3 py-2 hover:bg-secondary/70 transition-colors duration-200"
             @click="toggleMobileAccordion(item)"
-            class="flex items-center justify-between gap-2 cursor-pointer rounded-xl px-3 py-2 hover:bg-secondary/70 transition-colors duration-200"
           >
             <p
               :class="

@@ -17,16 +17,19 @@ export type TNameIcon =
   | 'checkGradient'
   | 'google'
 
+const attrs = useAttrs()
+
 interface IProps {
   name: TNameIcon
   width?: number
-  class?: string
   height?: number
   colorStroke?: string
 }
 
 const props = withDefaults(defineProps<IProps>(), {
   colorStroke: 'currentColor',
+  width: undefined,
+  height: undefined,
 })
 </script>
 
@@ -47,8 +50,9 @@ const props = withDefaults(defineProps<IProps>(), {
 
   <svg
     v-if="name === 'check'"
+    v-bind="attrs"
     class="text-white"
-    :class="[`w-${props.width || 3} `, ` h-${props.height || 3} `, props.class]"
+    :class="[`w-${props.width || 3} `, ` h-${props.height || 3} `]"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"

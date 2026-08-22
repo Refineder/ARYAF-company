@@ -16,10 +16,11 @@ import { MORE_FROM_TOOL_DATA } from '~/constants/moreFromTool'
       >
         <div
           v-for="data in MORE_FROM_TOOL_DATA"
+          :key="data.title"
           class="rounded-lg bg-white p-4 flex flex-col gap-2"
         >
           <div class="p-3 rounded-md bg-accent w-fit">
-            <component class="text-primary" :is="data.icon" />
+            <component :is="data.icon" class="text-primary" />
           </div>
           <h3 class="font-semibold text-lg">{{ data.title }}</h3>
           <p class="text-gray-500 max-w-xs">{{ data.description }}</p>

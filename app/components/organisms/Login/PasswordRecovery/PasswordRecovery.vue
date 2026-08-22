@@ -140,7 +140,7 @@ const onSubmit = handleSubmit((values) => {
             class="h-full rounded-full transition-all duration-300"
             :class="passwordStrength.barClass"
             :style="{ width: passwordStrength.percentage + '%' }"
-          />
+          ></div>
         </div>
         <p class="text-xs" :class="passwordStrength.textClass">
           قوة كلمة المرور: {{ passwordStrength.label }}

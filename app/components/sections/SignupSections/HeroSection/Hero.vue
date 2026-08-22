@@ -38,7 +38,7 @@ const goToLogin = () => router.push('/login')
         class="flex shrink w-full max-w-5xl flex-col gap-6 bg-white/95 p-8 rounded-lg md:rounded-none md:rounded-r-lg"
       >
         <div class="flex justify-between items-center gap-4 flex-wrap">
-          <div @click="goToHome" class="flex items-center gap-2 flex-wrap cursor-pointer">
+          <div class="flex items-center gap-2 flex-wrap cursor-pointer" @click="goToHome">
             <div>
               <img class="w-10" :src="logo" alt="logo" />
             </div>
@@ -67,7 +67,7 @@ const goToLogin = () => router.push('/login')
 
         <div class="self-center mt-auto">
           <p>
-            بالمتابعة، فإنك توافق على  <span class="font-semibold">الشروط</span> و <span
+            بالمتابعة، فإنك توافق على <span class="font-semibold">الشروط</span> و<span
               class="font-semibold"
               >سياسة الخصوصية</span
             >
@@ -89,7 +89,7 @@ const goToLogin = () => router.push('/login')
           <div class="mx-auto shadow-lg">
             <div class="flex items-center gap-2 justify-between md:gap-1">
               <p
-                v-for="(step, index) in steps"
+                v-for="step in steps"
                 :key="step.key"
                 style="min-width: fit-content"
                 class="cursor-pointer rounded-full px-3 md:px-5 py-2 text-xs md:text-sm font-semibold whitespace-nowrap transition-colors"

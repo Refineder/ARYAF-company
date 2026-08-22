@@ -20,11 +20,11 @@ const schema = toTypedSchema(
   })
 )
 
-const { handleSubmit, errors, meta } = useForm({
+const { handleSubmit, meta } = useForm({
   validationSchema: schema,
 })
 
-const onSubmit = handleSubmit((values) => {
+const onSubmit = handleSubmit(() => {
   if (phoneError.value) return
   view.value = 'otp'
 })
@@ -133,7 +133,7 @@ const isValid = computed(() => {
           class="flex items-center gap-2 border border-zinc-200 focus-within:outline-2 focus-within:outline-primary-foreground px-4 py-2 rounded-md"
           :class="[phoneError ? 'border-rose-500!' : '']"
         >
-          <span class="h-6 w-px bg-zinc-200" />
+          <span class="h-6 w-px bg-zinc-200"></span>
           <input
             :value="phone"
             inputmode="numeric"
@@ -169,9 +169,9 @@ const isValid = computed(() => {
         >ارسال رمز التحقق</Button
       >
       <div class="grid gap-3 items-center" style="grid-template-columns: 1fr auto 1fr">
-        <span class="w-full h-px bg-muted-foreground inline-block" />
+        <span class="w-full h-px bg-muted-foreground inline-block"></span>
         <p>أو</p>
-        <span class="w-full h-px bg-muted-foreground inline-block" />
+        <span class="w-full h-px bg-muted-foreground inline-block"></span>
       </div>
       <Button size="lg" variant="outline" type="button">تسجيل الدخول باستخدام Google</Button>
     </form>
