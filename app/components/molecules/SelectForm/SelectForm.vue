@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useField } from 'vee-validate'
+import './style.css'
 
 interface IOption {
   value: string
@@ -28,7 +29,7 @@ const { value, errorMessage } = useField<string>(() => props.name)
     >
 
     <div
-      class="border border-zinc-200 focus-within:outline-2 focus-within:outline-primary-foreground px-4 py-2 rounded-md"
+      class="select-form border-2 border-zinc-200 px-4 py-2 rounded-md"
       :class="[errorMessage ? 'border-rose-500!' : '']"
     >
       <select
@@ -36,7 +37,10 @@ const { value, errorMessage } = useField<string>(() => props.name)
         class="w-full outline-0 bg-transparent cursor-pointer text-zinc-700"
         :class="[!value ? 'text-gray-400' : '']"
       >
-        <option value="" disabled>{{ placeholder || 'اختر' }}</option>
+        <button>
+          <selectedcontent></selectedcontent>
+        </button>
+
         <option v-for="opt in options" :key="opt.value" :value="opt.value">
           {{ opt.label }}
         </option>

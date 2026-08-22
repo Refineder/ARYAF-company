@@ -208,6 +208,10 @@ const goToHome = () => {
   router.push("/")
 }
 
+const goToSetupStore = () => {
+  router.push('/setup-store')
+}
+
 onMounted(() => {
   document.addEventListener('click', handleOutsideClick)
   document.addEventListener('keydown', handleKeydown)
@@ -264,7 +268,7 @@ onBeforeUnmount(() => {
       <div class="flex items-center gap-2 md:gap-4 shrink-0">
         <p class="gradient-text font-semibold text-lg hidden md:block">EN</p>
         <Button variant="outline" class="hidden md:block" @click="goToLogin"> تسجيل الدخول </Button>
-        <Button> أنشئ متجرك </Button>
+        <Button @click="goToSetupStore"> أنشئ متجرك </Button>
         <button
           class="lg:hidden cursor-pointer rounded-full p-2 hover:bg-secondary/70 transition-colors duration-200"
           aria-label="القائمة"

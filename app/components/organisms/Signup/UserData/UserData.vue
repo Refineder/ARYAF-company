@@ -17,16 +17,12 @@ const schema = toTypedSchema(
   yup.object({
     fullName: yup.string().required('الاسم الكريم مطلوب').min(2, 'الاسم قصير جدًا'),
     email: yup.string().required('البريد الالكتروني مطلوب').email('بريد إلكتروني غير صحيح'),
+    phone: yup.string().required('رقم الجوال مطلوب').min(9, 'رقم الجوال غير صحيح'),
   })
 )
 
-const { handleSubmit, meta } = useForm({
+const { handleSubmit, meta, defineField, errors } = useForm({
   validationSchema: schema,
-})
-
-const onSubmit = handleSubmit(() => {
-  if (phoneError.value) return
-  view.value = 'otp'
 })
 
 const view = ref<'form' | 'otp' | 'success'>('form')
@@ -34,28 +30,6 @@ const view = ref<'form' | 'otp' | 'success'>('form')
 const activeCountry = ref(COUNTRIES[0])
 
 const activeCountryFlag = ref(soaFlag)
-
-const phone = ref('')
-
-const onCountryChange = (event: Event) => {
-  const target = event.target as HTMLSelectElement
-  const country = COUNTRIES.find((c) => c.name === target.value) ?? COUNTRIES[0]
-  activeCountry.value = country
-  activeCountryFlag.value = country?.flag || psFlag
-}
-
-const onPhoneInput = (event: Event) => {
-  const input = event.target as HTMLInputElement
-  const sanitized = input.value.replace(/\D/g, '').slice(0, 9)
-  input.value = sanitized
-  phone.value = sanitized
-}
-
-const phoneError = computed(() => {
-  if (!phone.value) return 'رقم الجوال مطلوب'
-  if (phone.value.length < 9) return 'رقم الجوال غير صحيح'
-  return ''
-})
 
 const otpCode = ref(String(Math.floor(10000 + Math.random() * 90000)))
 
@@ -66,6 +40,36 @@ const otpInputRefs = ref<(InstanceType<typeof OtpInput> | null)[]>([])
 const otpStatus = ref<'idle' | 'correct' | 'wrong'>('idle')
 
 const otpCheck = ref('')
+
+const [phone, phoneAttrs] = defineField('phone')
+
+const onSubmit = handleSubmit((values) => {
+  if (!meta.value.valid) return
+  const fullPhone = `${activeCountry.value?.dial}${values.phone}`
+
+  const data = {
+    ...values,
+    phone: fullPhone,
+  }
+
+  console.log(data)
+  view.value = 'otp'
+})
+
+const onCountryChange = (event: Event) => {
+  const target = event.target as HTMLSelectElement
+  const country = COUNTRIES.find((c) => c.name === target.value) ?? COUNTRIES[0]
+  activeCountry.value = country
+  activeCountryFlag.value = country?.flag || psFlag
+}
+
+const onPhoneInput = (event: Event) => {
+  const input = event.target as HTMLInputElement
+
+  const sanitized = input.value.replace(/\D/g, '').slice(0, 9)
+
+  phone.value = sanitized
+}
 
 const setOtpInputRef = (index: number) => (el: unknown) => {
   otpInputRefs.value[index] = el as InstanceType<typeof OtpInput> | null
@@ -130,37 +134,38 @@ const isValid = computed(() => {
       <div class="flex flex-col gap-2 w-full">
         <label class="text-lg text-zinc-500">رقم الجوال</label>
         <div
-          class="flex items-center gap-2 border border-zinc-200 focus-within:outline-2 focus-within:outline-primary-foreground px-4 py-2 rounded-md"
-          :class="[phoneError ? 'border-rose-500!' : '']"
+          class="phone-input flex items-center gap-2 border! border-zinc-200 px-4 py-2 rounded-md"
+          :class="[errors.phone ? 'border-rose-500!' : 'gradient-border-bg']"
         >
           <span class="h-6 w-px bg-zinc-200"></span>
           <input
-            :value="phone"
+            v-model="phone"
+            v-bind="phoneAttrs"
             inputmode="numeric"
             type="tel"
             placeholder="رقم الجوال"
-            class="grow outline-0 min-w-0 caret-primary-foreground"
+            class="grow border-none outline-none min-w-0 caret-primary-foreground"
             @input="onPhoneInput"
           />
 
-          <div class="relative shrink-0">
+          <div class="phone-select relative shrink-0">
             <select
               class="appearance-none outline-0 cursor-pointer bg-transparent pr-4 text-zinc-700"
               :value="activeCountry?.name"
               @change="onCountryChange"
             >
               <option v-for="c in COUNTRIES" :key="c.dial" :value="c.name">
-                {{ c.dial }}
+                <img
+                  class="w-6 h-4 object-cover rounded-sm shrink-0"
+                  :src="c.flag"
+                  :alt="c?.name"
+                />
+                <span>{{ c.dial }}</span>
               </option>
             </select>
           </div>
-          <img
-            class="w-6 h-4 object-cover rounded-sm shrink-0"
-            :src="activeCountryFlag"
-            :alt="activeCountry?.name"
-          />
         </div>
-        <span v-if="phoneError" class="text-xs text-red-500">{{ phoneError }}</span>
+        <span v-if="errors.phone" class="text-xs text-red-500">{{ errors.phone }}</span>
       </div>
 
       <InputForm name="email" placeholder="مثال : usear@gmail.com" lable="البريد الالكتروني" />
@@ -183,8 +188,9 @@ const isValid = computed(() => {
     </h2>
 
     <p class="text-gray-500 text-center text-lg max-w-lg self-center">
-      تحقق من هاتفك أرسلنا رمز التحقق إلى {{ phone }}. أدخل الرمز بالأسفل لإكمال عمليه استعاده كلمه
-      المرور
+      تحقق من هاتفك أرسلنا رمز التحقق إلى
+      <span dir="ltr">{{ activeCountry?.dial }} {{ phone }}</span
+      >. أدخل الرمز بالأسفل لإكمال عمليه استعاده كلمه المرور
     </p>
 
     <div class="flex items-center justify-center gap-2" dir="ltr">

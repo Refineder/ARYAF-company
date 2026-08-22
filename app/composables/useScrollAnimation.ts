@@ -1,4 +1,4 @@
-export const useScrollAnimation = (selector = '.animate-on-scroll') => {
+export const useScrollAnimation = (selector = '.animate-on-scroll', thresholdValue = 0.4) => {
   let observer: IntersectionObserver | null = null
 
   onMounted(() => {
@@ -9,7 +9,7 @@ export const useScrollAnimation = (selector = '.animate-on-scroll') => {
         })
       },
       {
-        threshold: 0.4,
+        threshold: thresholdValue,
       }
     )
 

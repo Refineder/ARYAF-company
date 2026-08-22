@@ -1,0 +1,58 @@
+.select-form select {
+  appearance: base-select;
+}
+
+.select-form ::picker(select) {
+  appearance: base-select;
+  border-radius: 12px;
+  corner-shape: squricle;
+  padding: 0.4em;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(oklch(from var(--background) l c h) 0 0) padding-box,
+    var(--primary-gradient) border-box;
+}
+
+.select-form select option:hover,
+.select-form select option:focus-visible {
+  background-color: oklch(from var(--secondary) l c h);
+}
+
+.select-form:has(select:focus),
+.select-form:has(select:focus-visible) {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(oklch(from var(--background) l c h) 0 0) padding-box,
+    var(--primary-gradient) border-box;
+}
+
+.select-form select::picker-icon {
+  content: url('~/assets/images/signup/gradient-arrow.png');
+  align-content: center;
+  transition: 0.2s ease;
+}
+
+.select-form select:open::picker-icon {
+  rotate: 180deg;
+}
+
+.select-form select option:checked {
+  background-color: oklch(from var(--secondary) l c h);
+}
+
+.select-form select option {
+  padding: 0.4em;
+  border-radius: 12px;
+  corner-shape: squircle;
+}
+
+.select-form select option::checkmark {
+  content: url('~/assets/images/signup/gradient-check.svg');
+}
+
+.select-form select selectedcontent {
+  background: var(--primary-gradient);
+  padding: 1px;
+  color: transparent;
+  background-clip: text;
+}
