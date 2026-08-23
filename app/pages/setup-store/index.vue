@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import SetupHero from '~/components/sections/SetupStoreSections/SetupHero.vue'
+
 definePageMeta({
   layout: 'auth',
 })
 </script>
 
 <template>
-  <h1>Setup Store</h1>
+  <SetupHero />
 </template>

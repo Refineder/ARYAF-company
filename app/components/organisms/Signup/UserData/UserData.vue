@@ -7,7 +7,6 @@ import { psFlag, soaFlag } from '~/assets/images'
 import InputForm from '~/components/molecules/InputForm/InputForm.vue'
 import Button from '~/components/atoms/Button/Button.vue'
 import OtpInput from '~/components/molecules/OtpInput/OtpInput.vue'
-import './style.css'
 import { COUNTRIES } from '~/constants/countries'
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 

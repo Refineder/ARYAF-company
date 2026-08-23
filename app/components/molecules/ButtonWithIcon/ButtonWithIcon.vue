@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<IProps>(), {
 
 <template>
   <Button v-bind="attrs" :size="size">
-    <div class="flex items-center gap-4 font-normal">
+    <div class="flex items-center gap-4 justify-between font-normal">
       <slot></slot>
       <div class="bg-white p-2 w-fit rounded-full">
         <Icons :name="props.iconName" />

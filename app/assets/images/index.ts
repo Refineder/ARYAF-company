@@ -50,6 +50,24 @@ import story2 from '~/assets/images/home/stories/story-2.jpg'
 
 import loginHero from '~/assets/images/login/login-hero.png'
 
+import setupHero from "~/assets/images/setup-store/setup-hero.gif"
+
+import gradientArrowDown from '~/assets/images/signup/gradient-arrow.png'
+
+import delivery from '~/assets/images/setup-store/delivery.gif'
+import global from '~/assets/images/setup-store/global.gif'
+import laptop from '~/assets/images/setup-store/laptop.gif'
+import phone from '~/assets/images/setup-store/phone.gif'
+import shiled from '~/assets/images/setup-store/shiled.gif'
+import storeVisiable from '~/assets/images/setup-store/store-1.gif'
+import storeHidden from '~/assets/images/setup-store/store-2.gif'
+import kwtFlag from '~/assets/images/setup-store/KWT flag.png'
+import ksaFlag from '~/assets/images/setup-store/KSA flag.png'
+import qatFlag from '~/assets/images/setup-store/QAT flag.png'
+import egpFlag from '~/assets/images/setup-store/egypt flag.png'
+import sdnFlag from '~/assets/images/setup-store/SDN flag.png'
+import turFlag from '~/assets/images/setup-store/TUR flag.png'
+
 export {
   logo,
   chinaFlag,
@@ -93,3 +111,23 @@ export { soluation }
 export { story1, story2 }
 
 export {loginHero}
+
+export {setupHero}
+
+export {gradientArrowDown}
+
+export {
+  delivery,
+  global,
+  laptop,
+  phone,
+  shiled,
+  storeHidden,
+  storeVisiable,
+  qatFlag,
+  kwtFlag,
+  ksaFlag,
+  sdnFlag,
+  egpFlag,
+  turFlag
+}

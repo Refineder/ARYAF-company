@@ -24,23 +24,3 @@ const goToHome = () => router.push('/')
     <Button size="lg" type="button" @click="goToHome">الانتقال إلى لوحة التحكم</Button>
   </div>
 </template>
-
-<style scoped>
-@keyframes splash-pop {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.15);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.splash-pop {
-  animation: splash-pop 0.5s ease forwards;
-}
-</style>
