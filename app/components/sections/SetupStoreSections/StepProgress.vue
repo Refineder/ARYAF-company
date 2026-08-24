@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<IProps>(), {
   <div class="flex items-center p-2" dir="ltr">
     <template v-for="step in props.total" :key="step">
       <div class="flex flex-col justify-center items-center gap-2">
-        <p>الخطوة {{ step }}</p>
+        <p class="min-w-fit">الخطوة {{ step }}</p>
 
         <div :class="[step < props.current ? '' : 'gradient-border-bg border-2! rounded-full p-2']">
           <div

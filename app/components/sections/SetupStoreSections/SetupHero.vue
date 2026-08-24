@@ -84,8 +84,8 @@ const prevStep = () => {
             <p class="text-lg font-semibold">ارياف</p>
           </div>
 
-          <div v-if="started && !finished" class="grow min-w-0 overflow-x-auto px-2">
-            <div class="w-fit mx-auto">
+          <div v-if="started && !finished" class="grow overflow-x-auto px-2">
+            <div class="min-w-2xl w-fit mx-auto">
               <StepProgress :total="totalSteps" :current="currentStep" />
             </div>
           </div>

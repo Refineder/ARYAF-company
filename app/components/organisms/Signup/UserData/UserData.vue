@@ -159,7 +159,7 @@ const isValid = computed(() => {
                   :src="c.flag"
                   :alt="c?.name"
                 />
-                <span>{{ c.dial }}</span>
+                <p>{{ c.dial }}</p>
               </option>
             </select>
           </div>

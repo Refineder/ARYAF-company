@@ -24,7 +24,7 @@ const toggle = (value: string) => {
 
 <template>
   <div class="flex items-center flex-col gap-6 w-full">
-    <div class="max-w-sm h-full overflow-hidden">
+    <div class="max-w-72 h-full overflow-hidden">
       <img class="w-full h-full object-cover" :src="imgSrc" :alt="imgSrc" />
     </div>
 
