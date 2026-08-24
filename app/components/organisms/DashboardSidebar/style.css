@@ -1,0 +1,15 @@
+aside .sidebar-dashboard.router-link-active {
+  background-color: oklch(from var(--primary) 80% c h / 0.3);
+}
+
+aside .sidebar-dashboard.router-link-active span {
+  background: var(--primary-gradient);
+  padding: 1px;
+  color: transparent;
+  font-weight: 500;
+  background-clip: text;
+}
+
+aside .sidebar-dashboard:hover:not(.router-link-active) {
+  background: var(--muted);
+}

@@ -127,6 +127,10 @@
   background: linear-gradient(45deg, #e12afb, #8e51ff);
 }
 
+@utility gradient-bg-violet-dark {
+  background: linear-gradient(45deg, #5b2ea6, #7c3aed);
+}
+
 @utility bg-grid {
   background-image:
     linear-gradient(to right, currentColor 1px, transparent 1px),

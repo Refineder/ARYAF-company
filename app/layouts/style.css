@@ -1,0 +1,12 @@
+.dashboard-sidebar-enter-active,
+.dashboard-sidebar-leave-active {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.dashboard-sidebar-enter-from,
+.dashboard-sidebar-leave-to {
+  opacity: 0;
+  transform: translateX(24px);
+}
