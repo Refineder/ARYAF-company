@@ -13,15 +13,19 @@ const searchText = ref('')
 
 const isDarkTheme = ref(false)
 
+const router = useRouter()
+
 const toggleDarkTheme = () => {
   isDarkTheme.value = !isDarkTheme.value
 }
+
+const goToHome = () => router.push('/')
 </script>
 
 <template>
   <header class="bg-white rounded-2xl px-5 py-3 flex items-center justify-between gap-4">
     <div class="flex items-center gap-6 shrink-0">
-      <div class="flex items-center gap-2 cursor-pointer select-none">
+      <div class="flex items-center gap-2 cursor-pointer select-none" @click="goToHome">
         <img class="w-10 h-10 object-contain" :src="logo" alt="logo" />
         <span class="text-lg font-semibold">ارياف</span>
       </div>

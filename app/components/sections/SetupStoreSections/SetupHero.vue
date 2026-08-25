@@ -16,7 +16,7 @@ type Step = 1 | 2 | 3 | 4 | 5 | 6 | 7
 
 const router = useRouter()
 
-const goToHome = () => router.push('/')
+const goToDashboard = () => router.push('/dashboard')
 
 const totalSteps = 7
 
@@ -45,6 +45,8 @@ const isLastStep = computed(() => currentStep.value === totalSteps)
 const startSetup = () => {
   started.value = true
 }
+
+const goToHome = () => router.push('/')
 
 const nextStep = () => {
   if (!canContinue.value) return
@@ -181,7 +183,7 @@ const prevStep = () => {
             class="w-full max-w-md"
             size="lg"
             icon-name="arrowLeftGradient"
-            @click="goToHome"
+            @click="goToDashboard"
           >
             الانتقال إلى لوحة التحكم
           </ButtonWithIcon>
