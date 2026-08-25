@@ -29,8 +29,8 @@ const schema = computed(() =>
         ui.activeTab === 'password'
           ? yup.string().required('كلمة مرور غير صالحة')
           : yup.string().notRequired(),
-    })
-  )
+    }),
+  ),
 )
 
 const { handleSubmit } = useForm({

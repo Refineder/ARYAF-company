@@ -28,7 +28,7 @@ const sidebarOpen = ref(true)
         <DashboardSidebar v-show="sidebarOpen" />
       </Transition>
 
-      <main class="bg-white rounded-2xl grow p-6 overflow-y-auto">
+      <main class="bg-muted rounded-2xl grow p-6 overflow-y-auto">
         <slot></slot>
       </main>
     </div>

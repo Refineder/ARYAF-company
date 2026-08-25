@@ -4,3 +4,5 @@ node_modules
 dist
 coverage
 package-lock.json
+app/assets/images/**
+!app/assets/images/index.ts

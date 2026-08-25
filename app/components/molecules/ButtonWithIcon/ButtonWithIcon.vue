@@ -1,24 +1,34 @@
 <script setup lang="ts">
 import Icons, { type TNameIcon } from '~/components/atoms/ARYAFIcon/Icons.vue'
-import Button, { type TSize } from '~/components/atoms/Button/Button.vue'
+import Button, { type TSize, type TVariant } from '~/components/atoms/Button/Button.vue'
 
 interface IProps {
   iconName: TNameIcon
+  variant?: TVariant
   size?: TSize
+  iconCircle?: boolean
+  iconDirection?: 'left' | 'right'
 }
 
-const attrs = useAttrs();
+const attrs = useAttrs()
 
 const props = withDefaults(defineProps<IProps>(), {
   size: 'md',
+  variant: 'default',
+  iconCircle: true,
+  iconDirection: 'left',
 })
 </script>
 
 <template>
-  <Button v-bind="attrs" :size="size">
-    <div class="flex items-center gap-4 justify-between font-normal">
+  <Button :variant="variant" v-bind="attrs" :size="size">
+    <div
+      :class="[iconDirection === 'right' ? 'flex-row-reverse' : '']"
+      class="flex min-w-fit items-center gap-4 justify-between font-normal"
+    >
       <slot></slot>
-      <div class="bg-white p-2 w-fit rounded-full">
+
+      <div :class="[props.iconCircle ? 'bg-white p-2 w-fit rounded-full' : '']">
         <Icons :name="props.iconName" />
       </div>
     </div>

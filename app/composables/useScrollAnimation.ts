@@ -10,7 +10,7 @@ export const useScrollAnimation = (selector = '.animate-on-scroll', thresholdVal
       },
       {
         threshold: thresholdValue,
-      }
+      },
     )
 
     document.querySelectorAll(selector).forEach((element) => {

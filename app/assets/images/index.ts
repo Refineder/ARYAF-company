@@ -50,7 +50,7 @@ import story2 from '~/assets/images/home/stories/story-2.jpg'
 
 import loginHero from '~/assets/images/login/login-hero.png'
 
-import setupHero from "~/assets/images/setup-store/setup-hero.gif"
+import setupHero from '~/assets/images/setup-store/setup-hero.gif'
 
 import gradientArrowDown from '~/assets/images/signup/gradient-arrow.png'
 
@@ -67,6 +67,14 @@ import qatFlag from '~/assets/images/setup-store/QAT flag.png'
 import egpFlag from '~/assets/images/setup-store/egypt flag.png'
 import sdnFlag from '~/assets/images/setup-store/SDN flag.png'
 import turFlag from '~/assets/images/setup-store/TUR flag.png'
+
+import dashboardTravel from '~/assets/images/dashboard/dashboard-travel.png'
+import dashboardHeadPhonesProduct from '~/assets/images/dashboard/dashboard-headphones-product.png'
+import dashboardMapProduct from '~/assets/images/dashboard/dashboard-map-product.png'
+import dashboardPayProduct from '~/assets/images/dashboard/dashboard-pay-product.png'
+import dashboardPhonesProduct from '~/assets/images/dashboard/dashboard-phones-product.png'
+import dashboardWallpaperProduct from '~/assets/images/dashboard/dashboard-wallpaper-product.png'
+import dashboardShoesProduct from '~/assets/images/dashboard/dashborad-shoes-product.png'
 
 export {
   logo,
@@ -110,11 +118,21 @@ export { soluation }
 
 export { story1, story2 }
 
-export {loginHero}
+export { loginHero }
 
-export {setupHero}
+export { setupHero }
 
-export {gradientArrowDown}
+export { gradientArrowDown }
+
+export {
+  dashboardTravel,
+  dashboardHeadPhonesProduct,
+  dashboardMapProduct,
+  dashboardPayProduct,
+  dashboardPhonesProduct,
+  dashboardShoesProduct,
+  dashboardWallpaperProduct,
+}
 
 export {
   delivery,
@@ -129,5 +147,5 @@ export {
   ksaFlag,
   sdnFlag,
   egpFlag,
-  turFlag
+  turFlag,
 }

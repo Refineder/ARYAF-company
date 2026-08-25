@@ -18,7 +18,7 @@ const schema = toTypedSchema(
     country: yup.string().required('الدولة مطلوبة'),
     currency: yup.string().required('العملة مطلوبة'),
     template: yup.string().required('قالب المتجر مطلوب'),
-  })
+  }),
 )
 
 const { handleSubmit, meta } = useForm({

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-type TVariant = 'default' | 'outline-gradient' | 'secondary' | 'outline'
+export type TVariant = 'default' | 'outline-gradient' | 'secondary' | 'outline'
 export type TSize = 'sm' | 'md' | 'lg'
 interface IProps {
   variant?: TVariant

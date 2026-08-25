@@ -17,7 +17,7 @@ const schema = toTypedSchema(
     fullName: yup.string().required('الاسم الكريم مطلوب').min(2, 'الاسم قصير جدًا'),
     email: yup.string().required('البريد الالكتروني مطلوب').email('بريد إلكتروني غير صحيح'),
     phone: yup.string().required('رقم الجوال مطلوب').min(9, 'رقم الجوال غير صحيح'),
-  })
+  }),
 )
 
 const { handleSubmit, meta, defineField, errors } = useForm({

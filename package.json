@@ -8,8 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "format": "prettier . --write",
-    "format:check": "prettier . --check",
+    "format": "npx prettier \"app/**/*\" --write",
+    "format:check": "prettier \"app/**/*\" --check",
     "lint": "eslint .",
     "type-check": "nuxt typecheck",
     "prepare": "husky"

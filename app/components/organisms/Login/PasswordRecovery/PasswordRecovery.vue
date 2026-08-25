@@ -27,7 +27,7 @@ const schema = computed(() => {
     return toTypedSchema(
       yup.object({
         email: yup.string().required('البريد الالكتروني مطلوب').email('بريد إلكتروني غير صحيح'),
-      })
+      }),
     )
   }
 
@@ -43,7 +43,7 @@ const schema = computed(() => {
         .string()
         .required('تأكيد كلمة المرور مطلوب')
         .oneOf([yup.ref('newPassword')], 'كلمة المرور غير متطابقة'),
-    })
+    }),
   )
 })
 
