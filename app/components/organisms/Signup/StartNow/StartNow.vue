@@ -4,7 +4,7 @@ import Button from '~/components/atoms/Button/Button.vue'
 
 const router = useRouter()
 
-const goToHome = () => router.push('/')
+const goToDashboard = () => router.push('/dashboard')
 </script>
 
 <template>
@@ -21,6 +21,6 @@ const goToHome = () => router.push('/')
       تم إنشاء متجرك بنجاح في أرياف، انطلق الآن لتبدأ ببيع منتجاتك وجني الأرباح.
     </p>
 
-    <Button size="lg" type="button" @click="goToHome">الانتقال إلى لوحة التحكم</Button>
+    <Button size="lg" type="button" @click="goToDashboard">الانتقال إلى لوحة التحكم</Button>
   </div>
 </template>

@@ -139,6 +139,7 @@ const isValid = computed(() => {
           <span class="h-6 w-px bg-zinc-200"></span>
           <input
             v-model="phone"
+            dir="rtl"
             v-bind="phoneAttrs"
             inputmode="numeric"
             type="tel"
@@ -159,7 +160,7 @@ const isValid = computed(() => {
                   :src="c.flag"
                   :alt="c?.name"
                 />
-                <p>{{ c.dial }}</p>
+                {{ c.dial }}
               </option>
             </select>
           </div>
