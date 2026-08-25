@@ -75,6 +75,7 @@ import dashboardPayProduct from '~/assets/images/dashboard/dashboard-pay-product
 import dashboardPhonesProduct from '~/assets/images/dashboard/dashboard-phones-product.png'
 import dashboardWallpaperProduct from '~/assets/images/dashboard/dashboard-wallpaper-product.png'
 import dashboardShoesProduct from '~/assets/images/dashboard/dashborad-shoes-product.png'
+import dashboardCreateStore from '~/assets/images/dashboard/create-store.png'
 
 export {
   logo,
@@ -132,6 +133,7 @@ export {
   dashboardPhonesProduct,
   dashboardShoesProduct,
   dashboardWallpaperProduct,
+  dashboardCreateStore,
 }
 
 export {

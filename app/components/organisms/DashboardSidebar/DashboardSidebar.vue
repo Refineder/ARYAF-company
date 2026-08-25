@@ -2,13 +2,14 @@
 import { computed, ref } from 'vue'
 import {
   BellRing,
-  Boxes,
   CreditCard,
+  Plus,
   Settings,
   ShieldCheck,
-  Store as StoreIcon,
-  Tags,
-  Truck,
+  // Store as StoreIcon,
+  // Boxes,
+  // Tags,
+  // Truck,
   UserCog,
 } from 'lucide-vue-next'
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
@@ -56,10 +57,10 @@ const tabs: Record<TDashboardTab, IDashboardNavItem[]> = {
     },
   ],
   store: [
-    { id: 'store-overview', label: 'المتجر', icon: StoreIcon },
-    { id: 'inventory', label: 'المخزون', icon: Boxes },
-    { id: 'categories', label: 'التصنيفات', icon: Tags },
-    { id: 'shipping', label: 'الشحن', icon: Truck },
+    // { id: 'store-overview', label: 'المتجر', icon: StoreIcon },
+    // { id: 'inventory', label: 'المخزون', icon: Boxes },
+    // { id: 'categories', label: 'التصنيفات', icon: Tags },
+    // { id: 'shipping', label: 'الشحن', icon: Truck },
   ],
   setting: [
     { id: 'general-settings', label: 'الإعدادات العامة', icon: Settings },
@@ -145,6 +146,15 @@ const onSelectItem = (item: IDashboardNavItem) => {
 
         <span class="text-sm">{{ item.label }}</span>
       </NuxtLink>
+      <template v-if="activeItems.length === 0">
+        <NuxtLink
+          to="/dashboard/create-store"
+          class="sidebar-dashboard cursor-pointer items-center justify-center flex gap-3 bg-accent/50 rounded-xl px-3 py-2.5 transition-colors"
+        >
+          <Plus class="text-primary" />
+          <span class="text-lg text-primary">انشاء متجر</span>
+        </NuxtLink>
+      </template>
     </nav>
 
     <div class="flex items-center justify-between gap-2 border-t border-zinc-200 pt-4">
