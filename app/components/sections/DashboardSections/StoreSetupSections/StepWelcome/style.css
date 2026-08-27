@@ -1,0 +1,57 @@
+.welcome-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: '   robot   description   skew   ';
+}
+
+.wrapper-robot {
+  grid-area: robot;
+}
+
+.wrapper-description {
+  grid-area: description;
+}
+
+.wrapper-skew {
+  grid-area: skew;
+}
+
+.point-effect {
+  display: inline-flex;
+  position: relative;
+  background-color: var(--point-clr);
+  /* z-index: 10; */
+}
+
+.point-effect::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  scale: 1.4;
+  z-index: -1;
+  border-radius: 100px;
+  filter: blur(4px);
+
+  background-color: var(--point-clr);
+}
+
+@media (width < 1024px) {
+  .welcome-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas:
+      '   description  description   '
+      '   robot   skew   ';
+  }
+}
+
+@media (width < 643px) {
+  .welcome-grid {
+    grid-template-columns: repeat(1, 1fr);
+
+    grid-template-areas:
+      '   description   '
+      '   robot  '
+      '   skew   ';
+  }
+}

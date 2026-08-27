@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { dashboardCreateStore } from '~/assets/images'
 import Button from '~/components/atoms/Button/Button.vue'
+
+const router = useRouter()
+
+const goToStoreSetup = () => router.push('/dashboard/create-store/store-setup')
 </script>
 
 <template>
@@ -23,7 +27,7 @@ import Button from '~/components/atoms/Button/Button.vue'
         قالب احترافي.
       </p>
 
-      <Button size="lg"> أنشئ متجرك الان </Button>
+      <Button size="lg" @click="goToStoreSetup"> أنشئ متجرك الان </Button>
     </article>
   </section>
 </template>

@@ -1,0 +1,29 @@
+.step-ready-grid-wrapper {
+  container-type: inline-size;
+}
+
+.grid-container {
+  @container (width > 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-container ul {
+  counter-reset: nums;
+}
+.grid-container ul li::before {
+  counter-increment: nums;
+
+  content: counter(nums);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: oklch(from var(--primary) l c h);
+  font-weight: 500;
+  border-radius: 50px;
+  background-color: oklch(from var(--primary) l c h / 0.2);
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}

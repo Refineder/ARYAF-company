@@ -1,0 +1,57 @@
+.store-preview-dialog {
+  width: min(95vw, 900px);
+  max-width: min(95vw, 900px);
+  max-height: 90vh;
+  transition:
+    opacity 0.3s ease,
+    scale 0.3s ease,
+    overlay 0.3s ease allow-discrete,
+    display 0.3s ease allow-discrete;
+  opacity: 0;
+  scale: 0.95;
+}
+
+.store-preview-dialog[open] {
+  opacity: 1;
+  scale: 1;
+
+  @starting-style {
+    opacity: 0;
+    scale: 0.95;
+  }
+}
+
+.store-preview-dialog::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.store-preview-dialog[open]::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+
+  @starting-style {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+  }
+}
+
+.phone-frame {
+  width: min(400px, 90%);
+}
+
+.store-preview-dialog {
+  container-type: inline-size;
+}
+
+.store-preview-dialog nav {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.store-preview-dialog nav .nav-preview-links {
+  @container (width < 500px) {
+    display: none;
+  }
+}

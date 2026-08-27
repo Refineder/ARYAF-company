@@ -76,6 +76,10 @@ import dashboardPhonesProduct from '~/assets/images/dashboard/dashboard-phones-p
 import dashboardWallpaperProduct from '~/assets/images/dashboard/dashboard-wallpaper-product.png'
 import dashboardShoesProduct from '~/assets/images/dashboard/dashborad-shoes-product.png'
 import dashboardCreateStore from '~/assets/images/dashboard/create-store.png'
+import skewWallpaper from '~/assets/images/dashboard/skew-wallpaper.png'
+import robot from '~/assets/images/dashboard/robot.png'
+
+import reviewLogo from '~/assets/images/review-logo.png'
 
 export {
   logo,
@@ -134,6 +138,8 @@ export {
   dashboardShoesProduct,
   dashboardWallpaperProduct,
   dashboardCreateStore,
+  robot,
+  skewWallpaper,
 }
 
 export {
@@ -151,3 +157,5 @@ export {
   egpFlag,
   turFlag,
 }
+
+export { reviewLogo }
