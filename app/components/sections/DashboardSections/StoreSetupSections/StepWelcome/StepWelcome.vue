@@ -262,8 +262,8 @@ const preparingToCreate: { name: string; check: boolean }[] = [
       >
         <div class="flex justify-between items-center gap-3">
           <div class="flex flex-col gap-2">
-            <h2 class="font-semibold clamp-text-sm">إنشاء بالذكاء الاصطناعي</h2>
-            <p class="text-secondary-foreground">متجرك كامل في أقل من دقيقة</p>
+            <h2 class="font-semibold clamp-text-sm">استعرض القوالب</h2>
+            <p class="text-secondary-foreground">اختر من مئات القوالب الجاهزة</p>
           </div>
 
           <div
