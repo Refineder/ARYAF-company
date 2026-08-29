@@ -47,12 +47,12 @@ const themeStyles = {
   },
   minimal: {
     header: 'white',
-    background: 'oklch(from white 95% c h)',
-    card: 'rounded-full bg-primary rounded-4xl',
-    muted: 'bg-primary/50',
+    background: 'oklch(from gray calc(l + .36) c h)',
+    card: 'rounded-full bg-black rounded-4xl',
+    muted: 'bg-black/50',
     border: 'oklch(from white 90% c h)',
     accent: 'bg-gray-900',
-    accentText: 'bg-primary/70',
+    accentText: 'bg-black/70',
   },
 }
 

@@ -3,6 +3,9 @@ import { robot, skewWallpaper } from '~/assets/images'
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import './style.css'
 import { Clock, Star } from 'lucide-vue-next'
+import { TYPE_OPTIONS } from '~/@types/storeSetup'
+
+const model = defineModel<string | null>({ required: true })
 
 const preparingToCreate: { name: string; check: boolean }[] = [
   {
@@ -66,8 +69,14 @@ const preparingToCreate: { name: string; check: boolean }[] = [
 
     <article class="grid gap-4 grid-cols-[1fr] lg:grid-cols-[1fr_auto_1fr] lg:gap-3">
       <div
-        class="bg-white py-4 px-8 flex flex-col gap-2 rounded-2xl border-2 border-muted transition-colors cursor-pointer hover:border-primary"
+        class="bg-white py-4 px-8 flex flex-col gap-2 rounded-2xl border-3 transition-colors cursor-pointer"
         style="corner-shape: squircel"
+        :class="[
+          model === TYPE_OPTIONS[0].value
+            ? 'gradient-border-bg'
+            : 'border-muted hover:border-primary',
+        ]"
+        @click="model = TYPE_OPTIONS[0].value"
       >
         <div class="flex justify-between items-center gap-3">
           <div
@@ -257,8 +266,14 @@ const preparingToCreate: { name: string; check: boolean }[] = [
       </div>
 
       <div
-        class="bg-white flex-1 py-4 px-8 flex flex-col gap-2 rounded-2xl border-2 border-muted transition-colors cursor-pointer hover:border-primary"
+        class="bg-white flex-1 py-4 px-8 flex flex-col gap-2 rounded-2xl border-3 transition-colors cursor-pointer"
         style="corner-shape: squircel"
+        :class="[
+          model === TYPE_OPTIONS[1].value
+            ? 'gradient-border-bg'
+            : 'border-muted hover:border-primary',
+        ]"
+        @click="model = TYPE_OPTIONS[1].value"
       >
         <div class="flex justify-between items-center gap-3">
           <div class="flex flex-col gap-2">

@@ -35,29 +35,23 @@ const emit = defineEmits<{ next: []; prev: []; preview: [] }>()
           معاينة المتجر
         </ButtonWithIcon>
       </div>
-
-      <Button class="px-20" variant="secondary" @click="emit('prev')">
-        <span class="gradient-text">
-          {{ isFirstStep ? 'العودة' : 'السابق' }}
-        </span>
-      </Button>
     </template>
 
     <template v-else>
       <Button
         class="px-20"
         :disabled="!canProceed"
-        :class="canProceed ? '' : 'opacity-60 cursor-not-allowed'"
+        :class="canProceed ? '' : 'opacity-60 cursor-not-allowed!'"
         @click="emit('next')"
       >
         {{ isLastStep ? 'إطلاق المتجر' : 'التالي' }}
       </Button>
-
-      <Button class="px-20" variant="secondary" @click="emit('prev')">
-        <span class="gradient-text">
-          {{ isFirstStep ? 'العودة' : 'السابق' }}
-        </span>
-      </Button>
     </template>
+
+    <Button class="px-20" variant="secondary" @click="emit('prev')">
+      <span class="gradient-text">
+        {{ isFirstStep ? 'العودة' : 'السابق' }}
+      </span>
+    </Button>
   </div>
 </template>

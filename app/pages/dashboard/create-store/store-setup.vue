@@ -17,6 +17,7 @@ definePageMeta({
 const TOTAL_STEPS = 6
 
 const currentStep = ref(1)
+const startType = ref<string | null>(null)
 const sector = ref<string | null>(null)
 const storeName = ref('')
 const theme = ref<string | null>(null)
@@ -39,7 +40,7 @@ const openPreview = () => {
 const canProceed = computed(() => {
   switch (currentStep.value) {
     case 1:
-      return true
+      return !!startType.value
     case 2:
       return !!sector.value
     case 3:
@@ -77,7 +78,7 @@ const prevStep = () => {
       class="section-container rounded-4xl min-h-[70svh] flex items-center justify-center"
       style="corner-shape: squircle"
     >
-      <StepWelcome v-if="currentStep === 1" />
+      <StepWelcome v-if="currentStep === 1" v-model="startType" />
       <StepSector v-else-if="currentStep === 2" v-model="sector" />
       <StepStoreName v-else-if="currentStep === 3" v-model="storeName" />
       <StepTheme v-else-if="currentStep === 4" v-model="theme" />

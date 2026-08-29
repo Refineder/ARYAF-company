@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import { inject, type Ref } from 'vue'
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import Button from '~/components/atoms/Button/Button.vue'
 import './style.css'
 
 import { SECTOR_OPTIONS } from '~/@types/storeSetup'
-const storeName = inject<import('vue').Ref<string>>('storeName', ref('متجرك'))
-const selectedSector = inject<import('vue').Ref<string | null>>('sector', ref(null))
+const storeName = inject<Ref<string>>('storeName', ref('متجرك'))
+const selectedSector = inject<Ref<string | null>>('sector', ref(null))
 
 const sectorLabel = computed(() => {
   return SECTOR_OPTIONS.find((o) => o.value === selectedSector.value)?.label ?? ''

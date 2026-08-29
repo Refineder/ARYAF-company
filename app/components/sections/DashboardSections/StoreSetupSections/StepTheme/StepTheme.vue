@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { inject, type Ref } from 'vue'
 import { THEME_OPTIONS } from '~/@types/storeSetup'
 import StoreThemePreview, {
   type TTheme,
@@ -6,7 +7,7 @@ import StoreThemePreview, {
 
 const model = defineModel<string | null>({ required: true })
 
-const storeName = inject<import('vue').Ref<string>>('storeName', ref('متجرك'))
+const storeName = inject<Ref<string>>('storeName', ref('متجرك'))
 </script>
 
 <template>

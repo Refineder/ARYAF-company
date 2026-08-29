@@ -35,10 +35,15 @@ export const SECTOR_OPTIONS: { value: string; label: string; icon: Component }[]
 ]
 
 export const THEME_OPTIONS = [
-  { value: 'modern', label: 'عصري', description: 'تصميم حديث بألوان متدرجة وزوايا ناعمة' },
-  { value: 'elegant', label: 'أنيق', description: 'أناقة راقية بtones ذهبية وكلاسيكية' },
-  { value: 'bold', label: 'جريء', description: 'ألوان قوية وتصميم يلفت الانتباه' },
-  { value: 'minimal', label: 'بسيط', description: 'تصميم نظيف وبسيط يركز على المحتوى' },
+  { value: 'modern', label: 'عصري', description: 'خطوط نظيفة، مساحات واسعة' },
+  { value: 'elegant', label: 'أنيق', description: 'فخامة وراقي وجمال' },
+  { value: 'bold', label: 'جريء', description: 'قوي، دراماتيكي، لافت' },
+  { value: 'minimal', label: 'بسيط', description: 'هادئ، أبيض، تركيز تام' },
+]
+
+export const TYPE_OPTIONS: [{ value: string; label: string }, { value: string; label: string }] = [
+  { value: 'ai', label: 'إنشاء بالذكاء الاصطناعي' },
+  { value: 'template', label: 'استعرض القوالب' },
 ]
 
 export const AI_SUGGESTIONS = ['أناقة', 'بلوم', '루나', 'كوكب', 'نيون ستور']

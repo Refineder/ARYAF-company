@@ -34,7 +34,7 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
         <ButtonWithIcon color-stroke="white" icon-name="laptop" :icon-circle="false"
           >فتح المتجر</ButtonWithIcon
         >
-        <ButtonWithIcon icon-name="laptop" :icon-circle="false" variant="secondary">
+        <ButtonWithIcon icon-name="copyGradient" :icon-circle="false" variant="secondary">
           <span class="gradient-text">نسخ الرابط</span>
         </ButtonWithIcon>
       </div>
