@@ -17,8 +17,7 @@ import ProfileAvatar from '~/components/molecules/ProfileAvatar/ProfileAvatar.vu
 import { isIconName, type IDashboardNavItem, type TDashboardTab } from '~/@types/dashboard'
 import './style.css'
 
-const emit = defineEmits<{ select: [item: IDashboardNavItem] }>()
-
+const emit = defineEmits<{ select: [item: IDashboardNavItem]; 'toggle-sidebar': [] }>()
 const userName = ref('أحمد حسام')
 
 const route = useRoute()
@@ -104,7 +103,17 @@ const onSelectItem = (item: IDashboardNavItem) => {
 </script>
 
 <template>
-  <aside class="bg-white rounded-2xl p-4 w-64 shrink-0 flex flex-col gap-6 max-h-svh">
+  <aside
+    class="bg-white/70 backdrop-blur-lg rounded-2xl p-4 w-64 shrink-0 flex h-full top-0 right-0 fixed flex-col gap-6 max-h-svh md:sticky md:top-5 md:h-auto"
+  >
+    <button
+      type="button"
+      class="cursor-pointer grid place-items-center w-9 h-9 rounded-full hover:bg-muted transition-colors shrink-0 md:hidden"
+      aria-label="فتح القائمة الجانبية"
+      @click="emit('toggle-sidebar')"
+    >
+      <Icons name="dashboardMenu" :width="20" :height="20" />
+    </button>
     <div class="flex items-center justify-between gap-2">
       <button
         v-for="tab in tabButtons"

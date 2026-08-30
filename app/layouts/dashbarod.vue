@@ -25,7 +25,7 @@ const sidebarOpen = ref(true)
 
     <div class="flex gap-2 grow min-h-0">
       <Transition name="dashboard-sidebar">
-        <DashboardSidebar v-show="sidebarOpen" />
+        <DashboardSidebar v-show="sidebarOpen" @toggle-sidebar="sidebarOpen = !sidebarOpen" />
       </Transition>
 
       <main class="bg-muted rounded-2xl grow p-6 overflow-y-auto">
