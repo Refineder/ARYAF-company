@@ -5,7 +5,7 @@ import { PATHS } from '~/constants/paths'
 
 const router = useRouter()
 
-const goToDashboardCreateStore = () => router.push(PATHS.STORE_SETUP)
+const goToDashboardCreateStore = () => router.push(PATHS.DASHBOARD_CREATE_STORE_STORE_SETUP)
 </script>
 
 <template>
