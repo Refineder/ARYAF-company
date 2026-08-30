@@ -8,6 +8,7 @@ import { toTypedSchema } from '@vee-validate/yup'
 import Button from '~/components/atoms/Button/Button.vue'
 import OtpVerification from '~/components/organisms/Login/OtpVerification/OtpVerification.vue'
 import PasswordRecovery from '~/components/organisms/Login/PasswordRecovery/PasswordRecovery.vue'
+import { PATHS } from '~/constants/paths'
 
 const ui = reactive({
   activeTab: 'password' as 'password' | 'otp',
@@ -64,8 +65,8 @@ const onRecoverSubmit = (values: unknown) => {
   console.log('تم إعادة تعيين كلمة المرور:', values)
 }
 
-const goToHome = () => router.push('/')
-const goToSignup = () => router.push('/signup')
+const goToHome = () => router.push(PATHS.HOME)
+const goToSignup = () => router.push(PATHS.SIGNUP)
 </script>
 
 <template>

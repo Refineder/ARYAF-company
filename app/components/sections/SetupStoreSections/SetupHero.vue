@@ -11,12 +11,13 @@ import StepFive from './StepFive.vue'
 import StepSix from './StepSix.vue'
 import StepSeven from './StepSeven.vue'
 import Button from '~/components/atoms/Button/Button.vue'
+import { PATHS } from '~/constants/paths.ts'
 
 type Step = 1 | 2 | 3 | 4 | 5 | 6 | 7
 
 const router = useRouter()
 
-const goToDashboard = () => router.push('/dashboard')
+const goToDashboard = () => router.push(PATHS.DASHBOARD)
 
 const totalSteps = 7
 
@@ -46,7 +47,7 @@ const startSetup = () => {
   started.value = true
 }
 
-const goToHome = () => router.push('/')
+const goToHome = () => router.push(PATHS.HOME)
 
 const nextStep = () => {
   if (!canContinue.value) return

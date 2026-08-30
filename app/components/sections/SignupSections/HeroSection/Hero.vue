@@ -8,6 +8,7 @@ import BusinessVerification from '~/components/organisms/Signup/BusinessVerifica
 import StartNow from '~/components/organisms/Signup/StartNow/StartNow.vue'
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import '~/assets/css/select.css'
+import { PATHS } from '~/constants/paths'
 
 const steps = [
   { key: 1, label: 'بيانات المستخدم' },
@@ -21,12 +22,12 @@ const activeStep = ref(1)
 
 const router = useRouter()
 
-const goToHome = () => router.push('/')
+const goToHome = () => router.push(PATHS.HOME)
 
 const goToStep = (key: number) => {
   activeStep.value = key
 }
-const goToLogin = () => router.push('/login')
+const goToLogin = () => router.push(PATHS.LOGIN)
 </script>
 
 <template>

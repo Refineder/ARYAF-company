@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { dashboardCreateStore } from '~/assets/images'
 import Button from '~/components/atoms/Button/Button.vue'
+import { PATHS } from '~/constants/paths'
 
 const router = useRouter()
 
-const goToStoreSetup = () => router.push('/dashboard/create-store/store-setup')
+const goToStoreSetup = () => router.push(PATHS.DASHBOARD_CREATE_STORE_STORE_SETUP)
 </script>
 
 <template>

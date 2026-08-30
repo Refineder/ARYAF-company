@@ -81,6 +81,7 @@ import { NAVBAR_ITEMS } from '~/constants/navbar'
 import type { INavbarItem, TNavIcon } from '~/constants/navbar'
 import Button from '~/components/atoms/Button/Button.vue'
 import { PaperBag, UserShield } from '@lucide/vue'
+import { PATHS } from '~/constants/paths'
 
 const iconMap: Record<TNavIcon, Component> = {
   store: Store,
@@ -201,15 +202,15 @@ const handleKeydown = (event: KeyboardEvent) => {
 }
 
 const goToLogin = () => {
-  router.push('/login');
+  router.push(PATHS.LOGIN);
 }
 
 const goToHome = () => {
-  router.push("/")
+  router.push(PATHS.HOME)
 }
 
-const goToSetupStore = () => {
-  router.push('/setup-store')
+const goToStoreSetup = () => {
+  router.push(PATHS.STORE_SETUP)
 }
 
 onMounted(() => {
@@ -268,7 +269,7 @@ onBeforeUnmount(() => {
       <div class="flex items-center gap-2 md:gap-4 shrink-0">
         <p class="gradient-text font-semibold text-lg hidden md:block">EN</p>
         <Button variant="outline" class="hidden md:block" @click="goToLogin"> تسجيل الدخول </Button>
-        <Button @click="goToSetupStore"> أنشئ متجرك </Button>
+        <Button @click="goToStoreSetup"> أنشئ متجرك </Button>
         <button
           class="lg:hidden cursor-pointer rounded-full p-2 hover:bg-secondary/70 transition-colors duration-200"
           aria-label="القائمة"

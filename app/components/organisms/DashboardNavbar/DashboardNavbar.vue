@@ -4,6 +4,7 @@ import { Search, Sparkles } from 'lucide-vue-next'
 import { logo } from '~/assets/images'
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import ProfileAvatar from '~/components/molecules/ProfileAvatar/ProfileAvatar.vue'
+import { PATHS } from '~/constants/paths'
 
 const emit = defineEmits<{ 'toggle-sidebar': [] }>()
 
@@ -19,7 +20,7 @@ const toggleDarkTheme = () => {
   isDarkTheme.value = !isDarkTheme.value
 }
 
-const goToHome = () => router.push('/')
+const goToHome = () => router.push(PATHS.HOME)
 </script>
 
 <template>
@@ -51,9 +52,9 @@ const goToHome = () => router.push('/')
     </div>
 
     <div
-      class="grow max-w-md min-w-0 border! border-zinc-200 rounded-full px-4 py-2 flex items-center gap-2 focus-within:gradient-border-bg transition-colors"
+      class="grow max-w-md min-w-0 border! border-zinc-200 rounded-full px-4 py-2 hidden items-center gap-2 focus-within:gradient-border-bg transition-colors sm:flex"
     >
-      <Search class="w-5 h-5 text-primary" />
+      <Search class="w-5 h-5 shrink-0 text-primary" />
       <input
         v-model="searchText"
         type="text"

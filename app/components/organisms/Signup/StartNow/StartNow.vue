@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import Button from '~/components/atoms/Button/Button.vue'
+import { PATHS } from '~/constants/paths'
 
 const router = useRouter()
 
-const goToDashboard = () => router.push('/dashboard')
+const goToDashboard = () => router.push(PATHS.DASHBOARD)
 </script>
 
 <template>

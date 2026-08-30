@@ -16,6 +16,7 @@ import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import ProfileAvatar from '~/components/molecules/ProfileAvatar/ProfileAvatar.vue'
 import { isIconName, type IDashboardNavItem, type TDashboardTab } from '~/@types/dashboard'
 import './style.css'
+import { PATHS } from '~/constants/paths'
 
 const emit = defineEmits<{ select: [item: IDashboardNavItem]; 'toggle-sidebar': [] }>()
 const userName = ref('أحمد حسام')
@@ -28,31 +29,31 @@ const tabs: Record<TDashboardTab, IDashboardNavItem[]> = {
       id: 'overview',
       label: 'لوحة التحكم',
       icon: 'dashboard',
-      path: '/dashboard',
+      path: PATHS.DASHBOARD,
     },
     {
       id: 'products',
       label: 'المنتجات',
       icon: 'dashboard',
-      path: '/dashboard/products',
+      path: PATHS.DASHBOARD_PRODUCTS,
     },
     {
       id: 'orders',
       label: 'الطلبات',
       icon: 'dashboard',
-      path: '/dashboard/orders',
+      path: PATHS.DASHBOARD_ORDERS,
     },
     {
       id: 'customers',
       label: 'العملاء',
       icon: 'dashboard',
-      path: '/dashboard/customers',
+      path: PATHS.DASHBOARD_CUSTOMERS,
     },
     {
       id: 'marketing',
       label: 'التسويق',
       icon: 'dashboard',
-      path: '/dashboard/marketing',
+      path: PATHS.DASHBOARD_MARKETING,
     },
   ],
   store: [
@@ -157,7 +158,7 @@ const onSelectItem = (item: IDashboardNavItem) => {
       </NuxtLink>
       <template v-if="activeItems.length === 0">
         <NuxtLink
-          to="/dashboard/create-store"
+          :to="PATHS.DASHBOARD_CREATE_STORE"
           class="sidebar-dashboard cursor-pointer items-center justify-center flex gap-3 bg-accent/50 rounded-xl px-3 py-2.5 transition-colors"
         >
           <Plus class="text-primary" />

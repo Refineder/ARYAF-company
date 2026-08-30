@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import Button from '~/components/atoms/Button/Button.vue'
 import './style.css'
+import { PATHS } from '~/constants/paths'
 
 interface IProps {
   storeName: string
@@ -21,7 +22,7 @@ onMounted(() => {
 })
 
 const goToStoreReview = () => {
-  router.push('/dashboard/create-store/store-review')
+  router.push(PATHS.DASHBAORD_CREATE_STORE_STORE_REVIEW)
 }
 </script>
 

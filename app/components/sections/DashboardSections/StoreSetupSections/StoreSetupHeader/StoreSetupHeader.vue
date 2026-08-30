@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
 import { STORE_SETUP_STEPS } from '~/@types/storeSetup'
+import { PATHS } from '~/constants/paths'
 
 interface IProps {
   currentStep: number
@@ -16,7 +17,7 @@ defineProps<IProps>()
     style="corner-shape: squircle"
   >
     <NuxtLink
-      to="/dashboard"
+      :to="PATHS.DASHBOARD"
       class="text-white px-4 py-2 rounded-4xl flex gradient-bg items-center gap-2 shrink-0 cursor-pointer"
       style="corner-shape: squircle"
     >
@@ -26,7 +27,7 @@ defineProps<IProps>()
 
     <div class="flex items-center gap-2 text-xs overflow-x-auto">
       <NuxtLink
-        to="/dashboard"
+        :to="PATHS.DASHBOARD"
         class="text-gray-400 text-[14px] hover:text-primary-foreground transition-colors shrink-0"
       >
         الرئيسية
