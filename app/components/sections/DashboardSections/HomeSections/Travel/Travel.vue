@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { dashboardTravel } from '~/assets/images'
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
+import { PATHS } from '~/constants/paths'
+
+const router = useRouter()
+
+const goToDashboardCreateStore = () => router.push(PATHS.STORE_SETUP)
 </script>
 
 <template>
@@ -20,7 +25,10 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
         العملاء وبدء البيع بثقة.
       </p>
       <div class="flex gap-4 flex-wrap">
-        <ButtonWithIcon :icon-circle="false" icon-name="dashboardCode"
+        <ButtonWithIcon
+          :icon-circle="false"
+          icon-name="dashboardCode"
+          @click="goToDashboardCreateStore"
           >أنشئ متجرك مع أرياف AI</ButtonWithIcon
         >
         <ButtonWithIcon

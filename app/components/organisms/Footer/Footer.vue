@@ -10,6 +10,12 @@ import {
   soaFlag,
 } from '~/assets/images'
 import Button from '~/components/atoms/Button/Button.vue'
+import { PATHS } from '~/constants/paths';
+
+const router = useRouter();
+
+const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
+
 </script>
 
 <template>
@@ -22,7 +28,7 @@ import Button from '~/components/atoms/Button/Button.vue'
           التجارة مو صعبة إذا بدأتها من المكان الصح، هنا تلقى الحلول والدعم والمجتمع اللي بيساعدك
           تغيّر حياتك.
         </p>
-        <Button size="lg" class="w-fit">أنشئ متجرك الأن</Button>
+        <Button size="lg" class="w-fit" @click="goToCreateStore">أنشئ متجرك الأن</Button>
       </article>
 
       <article

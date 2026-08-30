@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { ideaLeft, ideaRight } from '~/assets/images'
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
+import { PATHS } from '~/constants/paths'
+
+const router = useRouter()
+
+const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
 </script>
 
 <template>
@@ -20,7 +25,9 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
         ARYAF تمنحك طريقة أسرع وأسهل لبناء متجرك الإلكتروني.أنشئ موقعك، أطلق متجرك، وابدأ البيع خلال
         دقائق باستخدام أدوات ذكية وقوالب احترافية جاهزة.
       </p>
-      <ButtonWithIcon icon-name="arrowLeftGradient"> أنشئ متجرك مجاناً </ButtonWithIcon>
+      <ButtonWithIcon icon-name="arrowLeftGradient" @click="goToCreateStore">
+        أنشئ متجرك مجاناً
+      </ButtonWithIcon>
     </div>
   </section>
 </template>

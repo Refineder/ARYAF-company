@@ -1,6 +1,7 @@
 
 import { soluation } from '~/assets/images'
 import type { TNameIcon } from '~/components/atoms/ARYAFIcon/Icons.vue'
+import { PATHS } from './paths'
 
 export interface ISolutionFeature {
   icon: TNameIcon
@@ -14,6 +15,7 @@ export interface ISolutionTab {
   features: ISolutionFeature[]
   image: string
   buttonText: string
+  link?: string
 }
 
 export const SOLUTION_TABS: ISolutionTab[] = [
@@ -28,6 +30,7 @@ export const SOLUTION_TABS: ISolutionTab[] = [
     ],
     image: soluation,
     buttonText: 'أنشئ متجرك مجاناً',
+    link: PATHS.STORE_SETUP
   },
   {
     label: 'تصميم المتجر',

@@ -4,6 +4,11 @@ import Button from '~/components/atoms/Button/Button.vue'
 import '~/assets/css/animation.css'
 import './style.css'
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
+import { PATHS } from '~/constants/paths'
+
+const router = useRouter()
+
+const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
 
 useScrollAnimation('.reveal')
 </script>
@@ -24,7 +29,9 @@ useScrollAnimation('.reveal')
         للمدفوعات، والشحن، وإدارة المخزون، والتسويق، بكل سهولة
       </p>
       <div class="flex items-center justify-center gap-6 flex-wrap sm:justify-start">
-        <ButtonWithIcon icon-name="arrowLeftGradient" size="lg"> أنشئ متجرك مجاناً </ButtonWithIcon>
+        <ButtonWithIcon icon-name="arrowLeftGradient" size="lg" @click="goToCreateStore">
+          أنشئ متجرك مجاناً
+        </ButtonWithIcon>
 
         <Button size="lg" variant="outline-gradient" class="backdrop-blur-md"
           >اكتشف المتجر التجريبي</Button

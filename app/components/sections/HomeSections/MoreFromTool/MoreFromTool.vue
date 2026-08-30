@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
 import { MORE_FROM_TOOL_DATA } from '~/constants/moreFromTool'
+import { PATHS } from '~/constants/paths'
+
+const router = useRouter()
+
+const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
 </script>
 
 <template>
@@ -27,7 +32,11 @@ import { MORE_FROM_TOOL_DATA } from '~/constants/moreFromTool'
         </div>
       </article>
 
-      <ButtonWithIcon class="w-fit mx-auto" icon-name="arrowLeftGradient" size="lg"
+      <ButtonWithIcon
+        class="w-fit mx-auto"
+        icon-name="arrowLeftGradient"
+        size="lg"
+        @click="goToCreateStore"
         >أنشئ متجرك الآن</ButtonWithIcon
       >
     </section>

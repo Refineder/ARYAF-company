@@ -3,9 +3,13 @@ import { ref, computed } from 'vue'
 import { SOLUTION_TABS } from '~/constants/soluations'
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
+import { PATHS } from '~/constants/paths'
 
+const router = useRouter()
 const activeTabIndex = ref(0)
 const currentTab = computed(() => SOLUTION_TABS[activeTabIndex.value] || SOLUTION_TABS[0])
+
+const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
 </script>
 
 <template>
@@ -56,7 +60,11 @@ const currentTab = computed(() => SOLUTION_TABS[activeTabIndex.value] || SOLUTIO
               <p class="text-lg">{{ feature.text }}</p>
             </li>
           </ul>
-          <ButtonWithIcon class="w-fit" icon-name="arrowLeftGradient">
+          <ButtonWithIcon
+            class="w-fit"
+            icon-name="arrowLeftGradient"
+            @click="currentTab.link ? goToCreateStore() : undefined"
+          >
             {{ currentTab.buttonText }}
           </ButtonWithIcon>
         </div>

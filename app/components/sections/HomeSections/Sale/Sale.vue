@@ -2,6 +2,11 @@
 import { saleBig, saleSmall } from '~/assets/images'
 import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
+import { PATHS } from '~/constants/paths'
+
+const router = useRouter()
+
+const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
 </script>
 
 <template>
@@ -34,7 +39,7 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
         </li>
       </ul>
 
-      <ButtonWithIcon icon-name="arrowLeftGradient" size="lg" class="w-fit"
+      <ButtonWithIcon icon-name="arrowLeftGradient" size="lg" class="w-fit" @click="goToCreateStore"
         >أنشئ متجرك مجاناً</ButtonWithIcon
       >
     </article>

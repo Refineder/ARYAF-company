@@ -5,7 +5,7 @@ import { PATHS } from '~/constants/paths'
 
 const router = useRouter()
 
-const goToStoreSetup = () => router.push(PATHS.DASHBOARD_CREATE_STORE_STORE_SETUP)
+const goToCreateStore = () => router.push(PATHS.DASHBOARD_CREATE_STORE_STORE_SETUP)
 </script>
 
 <template>
@@ -28,7 +28,7 @@ const goToStoreSetup = () => router.push(PATHS.DASHBOARD_CREATE_STORE_STORE_SETU
         قالب احترافي.
       </p>
 
-      <Button size="lg" @click="goToStoreSetup"> أنشئ متجرك الان </Button>
+      <Button size="lg" @click="goToCreateStore"> أنشئ متجرك الان </Button>
     </article>
   </section>
 </template>
