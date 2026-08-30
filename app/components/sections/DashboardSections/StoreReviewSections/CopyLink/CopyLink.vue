@@ -30,7 +30,7 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
         </div>
       </div>
 
-      <div class="flex items-center gap-3">
+      <div class="flex flex-wrap items-center gap-3">
         <ButtonWithIcon color-stroke="white" icon-name="laptop" :icon-circle="false"
           >فتح المتجر</ButtonWithIcon
         >

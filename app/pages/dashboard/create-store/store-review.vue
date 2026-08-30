@@ -3,7 +3,7 @@ import CompleteVerification from '~/components/sections/DashboardSections/StoreR
 import CopyLink from '~/components/sections/DashboardSections/StoreReviewSections/CopyLink/CopyLink.vue'
 
 definePageMeta({
-  layout: 'store-setup',
+  layout: 'dashbarod',
 })
 </script>
 
