@@ -9,6 +9,8 @@ interface IProps {
   iconCircle?: boolean
   iconDirection?: 'left' | 'right'
   colorStroke?: string
+  width?: number
+  heigth?: number
 }
 
 const attrs = useAttrs()
@@ -19,6 +21,8 @@ const props = withDefaults(defineProps<IProps>(), {
   iconCircle: true,
   iconDirection: 'left',
   colorStroke: '',
+  width: undefined,
+  heigth: undefined,
 })
 </script>
 
@@ -31,7 +35,7 @@ const props = withDefaults(defineProps<IProps>(), {
       <slot></slot>
 
       <div :class="[props.iconCircle ? 'bg-white p-2 w-fit rounded-full' : '']">
-        <Icons :name="props.iconName" :color-stroke="colorStroke" />
+        <Icons :width="width" :height="heigth" :name="props.iconName" :color-stroke="colorStroke" />
       </div>
     </div>
   </Button>

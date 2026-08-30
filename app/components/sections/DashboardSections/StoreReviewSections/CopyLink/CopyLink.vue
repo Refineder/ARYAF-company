@@ -1,5 +1,26 @@
 <script setup lang="ts">
 import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon.vue'
+import { PATHS } from '~/constants/paths'
+const link = 'https://dd.aryaf.com'
+
+const copied = ref(false)
+const router = useRouter()
+
+const goToDashboard = () => router.push(PATHS.DASHBOARD)
+
+const copyText = async (text: string) => {
+  try {
+    await navigator.clipboard.writeText(text)
+
+    copied.value = true
+
+    setTimeout(() => {
+      copied.value = false
+    }, 2000)
+  } catch (error) {
+    console.error('Failed to copy:', error)
+  }
+}
 </script>
 
 <template>
@@ -24,18 +45,31 @@ import ButtonWithIcon from '~/components/molecules/ButtonWithIcon/ButtonWithIcon
         <div>
           <p>اناقة للملابس</p>
           <div class="flex items-center gap-1">
-            <small>https://dd.aryaf.com</small>
+            <small>{{ link }}</small>
             <span class="inline-flex w-2 h-2 rounded-full bg-emerald-500"></span>
           </div>
         </div>
       </div>
 
       <div class="flex flex-wrap items-center gap-3">
-        <ButtonWithIcon color-stroke="white" icon-name="laptop" :icon-circle="false"
+        <ButtonWithIcon
+          color-stroke="white"
+          icon-name="laptop"
+          :icon-circle="false"
+          @click="goToDashboard"
           >فتح المتجر</ButtonWithIcon
         >
-        <ButtonWithIcon icon-name="copyGradient" :icon-circle="false" variant="secondary">
-          <span class="gradient-text">نسخ الرابط</span>
+        <ButtonWithIcon
+          :icon-name="copied ? 'checkGradient' : 'copyGradient'"
+          :icon-circle="false"
+          :heigth="copied ? 12 : undefined"
+          :width="copied ? 12 : undefined"
+          variant="secondary"
+          @click="copyText(link)"
+        >
+          <span class="gradient-text">
+            {{ copied ? 'تم النسخ' : 'نسخ الرابط' }}
+          </span>
         </ButtonWithIcon>
       </div>
     </article>
