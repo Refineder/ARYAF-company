@@ -69,8 +69,8 @@ const preparingToCreate: { name: string; check: boolean }[] = [
 
     <article class="grid gap-4 grid-cols-[1fr] lg:grid-cols-[1fr_auto_1fr] lg:gap-3">
       <div
-        class="bg-white py-4 px-8 flex flex-col gap-2 rounded-2xl border-3 transition-colors cursor-pointer"
-        style="corner-shape: squircel"
+        class="bg-white py-4 px-8 flex flex-col gap-2 rounded-4xl border-3 transition-colors cursor-pointer"
+        style="corner-shape: squircle"
         :class="[
           model === TYPE_OPTIONS[0].value
             ? 'gradient-border-bg'
@@ -266,8 +266,8 @@ const preparingToCreate: { name: string; check: boolean }[] = [
       </div>
 
       <div
-        class="bg-white flex-1 py-4 px-8 flex flex-col gap-2 rounded-2xl border-3 transition-colors cursor-pointer"
-        style="corner-shape: squircel"
+        class="bg-white flex-1 py-4 px-8 flex flex-col gap-2 rounded-4xl border-3 transition-colors cursor-pointer"
+        style="corner-shape: squircle"
         :class="[
           model === TYPE_OPTIONS[1].value
             ? 'gradient-border-bg'

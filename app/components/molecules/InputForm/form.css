@@ -1,3 +1,7 @@
+.input-wrapper {
+  border: 1px solid oklch(87.2% 0.01 258.338);
+}
+
 .input-wrapper:has(input:focus) {
   border: 1px solid transparent;
   background:
