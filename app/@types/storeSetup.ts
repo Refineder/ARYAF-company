@@ -1,6 +1,5 @@
 import { BookOpen, Coffee, Dumbbell, Gem, Heart, House, Shirt, Zap } from 'lucide-vue-next'
 import type { Component } from 'vue'
-// import type { TNameIcon } from '~/components/atoms/ARYAFIcon/Icons.vue'
 
 export interface ISetupStoreData {
   sector: string | null

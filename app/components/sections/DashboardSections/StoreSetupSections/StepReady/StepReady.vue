@@ -61,7 +61,7 @@ const sectorLabel = computed(() => {
             >
             <h3 class="clamp-text-sm font-semibold">اكتشف مجموعتنا الحصرية الجديدة</h3>
             <p>تصاميم راقية تعكس ذوقك الرفيع</p>
-            <div class="flex items-center gap-3">
+            <div class="flex flex-wrap items-center gap-3">
               <Button class="text-primary" variant="secondary">تعرّف أكثر</Button>
               <Button>تسوق الآن</Button>
             </div>

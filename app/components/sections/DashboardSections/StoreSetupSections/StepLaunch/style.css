@@ -16,12 +16,13 @@
   }
   50% {
     transform: scale(1.05);
-    opacity: 0.9;
+    opacity: 0.6;
   }
 }
 
 @keyframes launch-spark {
-  0% {
+  0%,
+  100% {
     opacity: 0;
     transform: scale(0);
   }
@@ -29,17 +30,13 @@
     opacity: 1;
     transform: scale(1);
   }
-  100% {
-    opacity: 0;
-    transform: scale(0);
-  }
 }
 
 @keyframes loading-dot {
   0%,
   80%,
   100% {
-    transform: scale(0.6);
+    transform: scale(0.8);
     opacity: 0.4;
   }
   40% {
@@ -66,6 +63,7 @@
   }
   60% {
     transform: scale(1.1);
+    opacity: 1;
   }
   100% {
     transform: scale(1);
