@@ -116,3 +116,4 @@ const goToLogin = () => router.push(PATHS.LOGIN)
     </div>
   </section>
 </template>
+ 
