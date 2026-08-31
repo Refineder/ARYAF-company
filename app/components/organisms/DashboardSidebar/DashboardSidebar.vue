@@ -22,6 +22,7 @@ const emit = defineEmits<{ select: [item: IDashboardNavItem]; 'toggle-sidebar': 
 const userName = ref('أحمد حسام')
 
 const route = useRoute()
+const router = useRouter()
 
 const tabs: Record<TDashboardTab, IDashboardNavItem[]> = {
   home: [
@@ -101,11 +102,13 @@ const isActive = (path?: string) => {
 const onSelectItem = (item: IDashboardNavItem) => {
   emit('select', item)
 }
+
+const goToHome = () => router.push(PATHS.HOME)
 </script>
 
 <template>
   <aside
-    class="bg-white/70 backdrop-blur-lg rounded-2xl p-4 w-64 shrink-0 flex h-full top-0 right-0 fixed flex-col gap-6 max-h-svh md:sticky md:top-5 md:h-auto"
+    class="bg-white/70 backdrop-blur-lg rounded-2xl p-4 w-64 shrink-0 flex h-full top-0 right-0 fixed flex-col gap-6 max-h-svh md:sticky md:top-0 md:h-full"
   >
     <button
       type="button"
@@ -179,6 +182,7 @@ const onSelectItem = (item: IDashboardNavItem) => {
         type="button"
         class="cursor-pointer grid place-items-center w-9 h-9 rounded-full hover:bg-destructive/10 transition-colors shrink-0"
         aria-label="تسجيل الخروج"
+        @click="goToHome"
       >
         <Icons name="dashboardLogout" :width="18" :height="18" />
       </button>

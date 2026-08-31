@@ -223,12 +223,12 @@ body {
 }
 
 .section-container {
-  width: min(100% - 2rem, 1450px);
+  width: min(100% - 1rem, 1450px);
   margin-inline: auto;
 }
 
 .section-container-sm {
-  width: min(100% - 2.5rem, 1250px);
+  width: min(100% - 1rem, 1250px);
   margin-inline: auto;
 }
 
