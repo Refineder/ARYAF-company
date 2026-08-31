@@ -33,7 +33,7 @@ const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
 
       <article
         class="grid gap-6"
-        style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"
+        style="grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr))"
       >
         <div class="flex flex-col gap-4">
           <h3 class="text-gray-400">الحلول</h3>

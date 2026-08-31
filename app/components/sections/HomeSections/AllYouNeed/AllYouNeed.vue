@@ -21,7 +21,7 @@ import { CARD_SUCCESS_DATA } from '~/constants/needToSuccess'
       </article>
       <article
         class="grid gap-4"
-        style="grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))"
+        style="grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr))"
       >
         <div
           v-for="data in CARD_SUCCESS_DATA"

@@ -8,7 +8,10 @@ import { COMMERCE_DATA } from '~/constants/commerce'
     <h2 class="text-center font-semibold clamp-text-md">
       انطلق بتجارتك<span class="gradient-text">, مهما كان قطاعك</span>
     </h2>
-    <article class="grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))">
+    <article
+      class="grid gap-4"
+      style="grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr))"
+    >
       <div v-for="data in COMMERCE_DATA" :key="data.title" class="flex flex-col gap-2">
         <div class="w-full h-60 overflow-hidden rounded-lg">
           <img class="rounded-lg w-full h-full object-cover" :src="data.thumb" :alt="data.title" />

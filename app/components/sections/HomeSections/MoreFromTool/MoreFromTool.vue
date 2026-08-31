@@ -17,7 +17,7 @@ const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
 
       <article
         class="grid gap-4"
-        style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"
+        style="grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr))"
       >
         <div
           v-for="data in MORE_FROM_TOOL_DATA"

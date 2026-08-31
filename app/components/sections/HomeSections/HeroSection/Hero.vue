@@ -10,7 +10,6 @@ const router = useRouter()
 
 const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
 
-
 useScrollAnimation('.reveal')
 </script>
 

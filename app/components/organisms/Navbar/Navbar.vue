@@ -354,7 +354,7 @@ onBeforeUnmount(() => {
                 ? 'max-h-[60vh] p-2 opacity-100'
                 : 'max-h-0 p-0 opacity-0')
             "
-            style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))"
+            style="grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr))"
           >
             <div v-for="column in item.columns" :key="column.title" class="flex flex-col gap-2">
               <h3 class="text-gray-400 text-sm font-medium">{{ column.title }}</h3>

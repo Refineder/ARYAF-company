@@ -18,7 +18,7 @@ useScrollAnimation()
 
       <article
         class="statistics-grid grid gap-4"
-        style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"
+        style="grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr))"
       >
         <div
           class="bg-background animate-on-scroll px-4 py-6 rounded-lg flex flex-col justify-center items-center gap-2"

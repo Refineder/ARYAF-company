@@ -84,7 +84,7 @@ const sectorLabel = computed(() => {
 
           <div
             class="grid gap-3"
-            style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr))"
+            style="grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr))"
           >
             <div
               v-for="(item, index) in [1, 2, 3, 4]"

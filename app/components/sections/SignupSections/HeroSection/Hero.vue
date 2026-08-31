@@ -84,11 +84,6 @@ const goToLogin = () => router.push(PATHS.LOGIN)
           alt="signup-hero"
         />
 
-
-
-
-        
-
         <div
           class="border border-gray-500 rounded-full py-1 backdrop-blur absolute top-8 left-[50%] mx-auto -translate-x-1/2 px-4 md:px-8 overflow-x-auto"
           style="background-color: rgba(0, 0, 0, 0.3); width: min(100%, 700px)"
