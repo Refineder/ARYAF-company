@@ -97,12 +97,12 @@ const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
         <div class="flex flex-col gap-4">
           <h3 class="text-gray-400">ارياف متاحة في</h3>
           <ul class="flex items-center gap-2">
-            <li><img :src="psFlag" alt="" /></li>
-            <li><img :src="egyptFlag" alt="" /></li>
-            <li><img :src="quaterFlag" alt="" /></li>
-            <li><img :src="soaFlag" alt="" /></li>
-            <li><img :src="jordenFlag" alt="" /></li>
-            <li><img :src="chinaFlag" alt="" /></li>
+            <li><img :src="psFlag" alt="Palestine Flag" /></li>
+            <li><img :src="egyptFlag" alt="Egypt Flag" /></li>
+            <li><img :src="quaterFlag" alt="Quater Flag" /></li>
+            <li><img :src="soaFlag" alt="SOA Flg" /></li>
+            <li><img :src="jordenFlag" alt="Jorden Flag" /></li>
+            <li><img :src="chinaFlag" alt="China Flg" /></li>
           </ul>
         </div>
       </article>
@@ -110,7 +110,7 @@ const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
       <article>
         <ul class="flex justify-between flex-wrap gap-4 items-center">
           <li class="flex items-center gap-2">
-            <img :src="logo" class="w-8" />
+            <img :src="logo" alt="ARYAF Logo" class="w-8" />
             <p class="text-lg font-semibold">ارياف</p>
           </li>
 

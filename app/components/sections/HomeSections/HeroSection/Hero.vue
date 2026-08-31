@@ -10,6 +10,7 @@ const router = useRouter()
 
 const goToCreateStore = () => router.push(PATHS.STORE_SETUP)
 
+
 useScrollAnimation('.reveal')
 </script>
 
@@ -41,32 +42,32 @@ useScrollAnimation('.reveal')
 
     <article class="relative">
       <div class="reveal fade-left w-full h-full overflow-hidden">
-        <img class="w-full h-full object-cover" :src="hero" alt="" />
+        <img class="w-full h-full object-cover" :src="hero" alt="Statistics Dashboard ARYAF Hero" />
       </div>
 
       <div
         class="img-vector reveal fade-down absolute right-0 top-[35%] -translate-y-1/2"
         style="width: min(45%, 250px)"
       >
-        <img :src="hero1" alt="" />
+        <img :src="hero1" alt="Hero Popup" />
       </div>
       <div
         class="img-vector reveal fade-left absolute left-0 top-[50%] -translate-y-1/2"
         style="width: min(45%, 250px)"
       >
-        <img :src="hero2" alt="" />
+        <img :src="hero2" alt="Hero Popup" />
       </div>
       <div
         class="img-vector reveal fade-right absolute right-0 top-[60%] -translate-y-1/2"
         style="width: min(45%, 250px)"
       >
-        <img :src="hero3" alt="" />
+        <img :src="hero3" alt="Hero Popup" />
       </div>
       <div
         class="img-vector reveal fade-up absolute left-0 top-[75%] -translate-y-1/2"
         style="width: min(45%, 250px)"
       >
-        <img :src="hero1" alt="" />
+        <img :src="hero1" alt="Hero Popup" />
       </div>
     </article>
   </section>

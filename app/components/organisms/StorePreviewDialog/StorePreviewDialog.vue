@@ -165,7 +165,7 @@ defineExpose({ open, close })
           class="flex flex-wrap items-center justify-between px-4 py-3 bg-white border-b border-gray-100 sticky top-0 z-10"
         >
           <div class="flex items-center gap-2">
-            <img :src="reviewLogo" alt="logo" class="" />
+            <img :src="reviewLogo" alt="logo" />
             <span class="font-semibold text-sm">{{ storeName }}</span>
           </div>
           <div
