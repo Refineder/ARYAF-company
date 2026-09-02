@@ -4,6 +4,9 @@ import Icons from '~/components/atoms/ARYAFIcon/Icons.vue'
 import Button from '~/components/atoms/Button/Button.vue'
 import { DOCUMENTS, type IDocument } from '~/constants/documents'
 
+const MAX_DOCUMENT_BYTES = 5 * 1024 * 1024
+const ALLOWED_DOCUMENT_EXTENSIONS = new Set(['png', 'jpg', 'jpeg', 'pdf'])
+
 const emit = defineEmits<{ next: [] }>()
 
 const uploadedCount = computed(() => DOCUMENTS.value.filter((d) => d.fileName).length)
@@ -15,6 +18,7 @@ const progressPercent = computed(() => Math.round((uploadedCount.value / totalCo
 const allUploaded = computed(() => uploadedCount.value === totalCount)
 
 const fileInputs = ref<Record<string, HTMLInputElement | null>>({})
+const fileErrors = ref<Record<string, string>>({})
 
 const setFileInputRef = (id: string) => (el: unknown) => {
   fileInputs.value[id] = el as HTMLInputElement | null
@@ -27,9 +31,21 @@ const openFilePicker = (doc: IDocument) => {
 const onFileChange = (doc: IDocument, event: Event) => {
   const input = event.target as HTMLInputElement
   const file = input.files?.[0]
-  if (file) {
-    doc.fileName = file.name
+  input.value = ''
+  if (!file) return
+
+  const extension = file.name.split('.').pop()?.toLowerCase() ?? ''
+  if (!ALLOWED_DOCUMENT_EXTENSIONS.has(extension)) {
+    fileErrors.value[doc.id] = `صيغة الملف ${file.name} غير مدعومة. اختر PNG أو JPG أو PDF.`
+    return
   }
+  if (file.size <= 0 || file.size > MAX_DOCUMENT_BYTES) {
+    fileErrors.value[doc.id] = `الملف ${file.name} فارغ أو يتجاوز الحد الأقصى البالغ 5 ميجابايت.`
+    return
+  }
+
+  fileErrors.value[doc.id] = ''
+  doc.fileName = file.name
 }
 
 const onSubmit = () => {
@@ -78,6 +94,10 @@ const onSubmit = () => {
             {{ doc.fileName }}
           </p>
           <p v-else class="text-sm text-gray-400">{{ doc.hint }}</p>
+          <p class="mt-1 text-xs text-gray-500">PNG أو JPG أو PDF · الحد الأقصى 5 ميجابايت</p>
+          <p v-if="fileErrors[doc.id]" role="alert" class="mt-1 text-xs text-red-600">
+            {{ fileErrors[doc.id] }}
+          </p>
         </div>
 
         <input
