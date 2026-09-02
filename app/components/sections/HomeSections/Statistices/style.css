@@ -34,7 +34,7 @@
 }
 
 .sales-counting::before {
-  content: counter(num) '+ مليار';
+  content: '+' counter(num);
 }
 
 .client-counting::before {

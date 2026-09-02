@@ -74,9 +74,10 @@ const onContinue = () => {
 
         <p class="text-gray-500 text-sm leading-relaxed">{{ plan.description }}</p>
 
-        <div class="flex items-end gap-1">
+        <div class="flex items-end gap-1" dir="ltr">
+          <span class="text-2xl font-bold clamp-text-sm">⃁</span>
           <span class="text-3xl font-bold clamp-text-sm">{{ plan.price }}</span>
-          <span class="text-gray-400 mb-1">ر.س / {{ plan.period }}</span>
+          <span class="text-gray-400 mb-1">/ {{ plan.period }}</span>
         </div>
 
         <ul class="flex flex-col gap-2 text-gray-600 text-sm">

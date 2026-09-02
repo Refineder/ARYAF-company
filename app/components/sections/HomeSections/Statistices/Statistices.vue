@@ -39,12 +39,12 @@ useScrollAnimation()
           <div>
             <Icons name="hashGradient" />
           </div>
-          <!-- <h3 class="sales-counting gradient-text font-semibold text-3xl">+10 مليار</h3> -->
-          <h3
-            class="sales-counting counting gradient-text font-semibold text-3xl"
-            style="--num: 10"
-          ></h3>
-          <p class="gradient-text text-lg font-semibold">ريال مبيعات نفذت عبر متاجر ارياف</p>
+          <h3 class="gradient-text font-semibold text-3xl" dir="ltr">
+            <span>⃁</span>
+            <span class="sales-counting counting" style="--num: 10"></span>
+            <span>مليار</span>
+          </h3>
+          <p class="gradient-text text-lg font-semibold">مبيعات نفذت عبر متاجر ارياف</p>
         </div>
         <div
           class="bg-background animate-on-scroll px-4 py-6 rounded-lg flex flex-col justify-center items-center gap-2"

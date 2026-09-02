@@ -22,7 +22,7 @@ const COUNTRIES = [
 ]
 
 const CURRENCIES = [
-  { value: 'sar', label: 'ريال سعودي (SAR)' },
+  { value: 'sar', label: '⃁ ريال سعودي (SAR)' },
   { value: 'qar', label: 'ريال قطري (QAR)' },
   { value: 'jod', label: 'دينار أردني (JOD)' },
   { value: 'egp', label: 'جنيه مصري (EGP)' },
